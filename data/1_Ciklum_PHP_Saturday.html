@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Ciklum PHP Saturday &#8212; AmdY</title>
+<link rel='dns-prefetch' href='//amdy.su' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента" href="http://amdy.su/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев" href="http://amdy.su/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев к &laquo;Ciklum PHP Saturday&raquo;" href="http://amdy.su/2011/08/15/ciklum-php-saturday/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-6704399-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-6704399-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/amdy.su\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://amdy.su/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://amdy.su/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/style.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/assets/fonts/genericons/genericons.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/responsive.css?ver=1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/amdy.su","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://amdy.su/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://amdy.su/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://amdy.su/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Yandex и приватные данные' href='http://amdy.su/2011/07/28/yandex-and-private-data/' />
+<link rel='next' title='Комбинаторика, нахождение слагаемых по сумме' href='http://amdy.su/2011/11/22/conbinatorics-find-summand-by-sum/' />
+<meta name="generator" content="WordPress 5.4.4" />
+<link rel="canonical" href="http://amdy.su/2011/08/15/ciklum-php-saturday/" />
+<link rel='shortlink' href='http://amdy.su/?p=458' />
+<link rel="alternate" type="application/json+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2011%2F08%2F15%2Fciklum-php-saturday%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2011%2F08%2F15%2Fciklum-php-saturday%2F&#038;format=xml" />
+<link rel="pingback" href="http://amdy.su/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="post-template-default single single-post postid-458 single-format-standard group-blog">
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div class="container">
+
+			<div class="site-branding">
+			
+									<h1 class="site-title"><a href="http://amdy.su/" title="AmdY" rel="home">AmdY</a></h1>
+					<h2 class="site-description">Извращение программиста</h2>
+				
+			</div><!-- .site-branding -->
+
+			<nav id="primary-nav" class="main-navigation">
+
+				<div class="menu-primary-navigation-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-520" class="menu-item menu-item-type- menu-item-object- menu-item-520"><a></a></li>
+<li id="menu-item-644" class="menu-item menu-item-type- menu-item-object- menu-item-644"><a></a></li>
+<li id="menu-item-646" class="menu-item menu-item-type- menu-item-object- menu-item-646"><a></a></li>
+<li id="menu-item-645" class="menu-item menu-item-type- menu-item-object- menu-item-645"><a></a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://amdy.su/contacts/">Контакты</a></li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+							<span class="search-icon">
+					<span class="genericon genericon-search"></span>
+					<span class="genericon genericon-close"></span>			
+				</span>
+				
+
+			<div id="slick-mobile-menu"></div>
+		
+		</div><!-- .container -->
+
+	</header><!-- #masthead -->
+
+			<div class="header-search">
+			<div class="container">
+				
+<form id="searchform" role="search" method="get" action="http://amdy.su/">
+	<span class="screen-reader-text">Поиск:</span>
+	<input type="search" class="search-input" placeholder="Поиск..." value="" name="s" title="Поиск:" />
+	<button type="submit" role="button" class="search-submit">Поиск</button>
+</form>			</div>
+		</div><!-- .header-search -->
+	
+	<div id="content" class="site-content container clear">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" >
+
+			
+<article id="post-458" class="post-458 post type-post status-publish format-standard hentry category-php category-programming tag-ciklum tag-drupal tag-modx tag-php tag-74 tag-konferentsiya">
+	<header class="entry-header">	
+		<h1 class="entry-title">Ciklum PHP Saturday</h1>
+		<div class="entry-meta clear">
+			<span class="entry-author"><a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=96&#038;d=mm&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' /></a> Создано автором <a href="http://amdy.su/author/amdy/" title="Записи amdy" rel="author">amdy</a></span>
+			<span class="entry-date">15 августа, 2011</span>
+			<span class="entry-category">в <a href="http://amdy.su/category/php/" title="Посмотреть все записи в PHP" >PHP</a> </span>
+		</div><!-- .entry-meta -->
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+	
+				
+		<p>Я до сих пор не могу в поверить, но <strong>ЭТО</strong> случилось &#8212; я побывал на первой белорусской <strong>конференции веб разработчиков</strong>, где мне ВСЁ понравилось. Мне прямо сейчас нужно активно работать и нагонять время потерянное в отпуске, но не могу сдержаться и буду писать отчёт о <a href="http://ciklum-minsk.blogspot.com/2011/08/ciklum-php-saturday.html" target="_blank">Ciklum PHP Saturday</a>. Это <strong>встреча php разработчиков</strong>, которая прошла в <strong>Минске</strong> 13 августа 2011 года.<span id="more-458"></span>Начну из далека и расскажу пару слов о <a href="http://ciklum-minsk.blogspot.com" target="_blank">Ciklum</a>. Мне посчастливилось и я некогда побывал в этой интересной компании на собеседовании. &nbsp;С порога Вас встречает уютный и домашний офис, в котором есть кухонька (моё любимое рабочее место) и нет огромных бараков с рядами программистов. Насколько я помню, в их блоге есть фотографии. Ах, совсем забыл о HR-ах, я встречался с<strong> Ольгой Кузнецовой</strong>. Беседа была очень тёплой и интересной, я даже опоздал на наш вечерний киккер с друзьями. &nbsp;Что же я узнал? Надеюсь ничего не напутаю, пишу по памяти. Компания Датская, имеет офисы в нескольких странах, в Беларуси где-то с сентября 2010-го. Они занимаются не <strong>аутсорсингом персонала</strong>, очень интересная модель и Вы фактически работаете в&nbsp;западноевропейской&nbsp;компании и занимаетесь чисто её проектами. Здесь кроется важный момент &#8212; <strong>нужен хороший английский</strong>, т.к. фактически идёт прямое взаимодействие с заказчиком, а не проходит через менеджмент.</p>
+<p>Теперь к нашим&nbsp;мухоморам. Мероприятие проходило в офисе ТУТ БАЙ, за что им огромное спасибо. На входе я добыл то, ради чего все ходят на подобные конференции &#8212; ручку, а то они у меня грызутся как семечки и страдаю вечной нехваткой. Сравнивая размеры помещения и количество народу в списках было страшно что не уместимся даже по 4-ре человека на место, но как обычно явилось значительно меньше и мы практически все вместились, лишь парочке человек пришлось заархивироваться. А уж как начали опрашивать сколько людей программирует на php, то была совсем печалька и руки подняло около трети. А уж тем, кто занимался менеджментом в айти, знает &#8212; такие числа нужно делить как минимум на 3.</p>
+<p>Первый доклад &#171;<strong>Crazy things done on PHP</strong>&#171;. Украинский докладчик Тарас Калапунь демонстрировал исходники, после которых мне стыдно называть свой блог &#171;извращения&#187;, у меня здесь лёгкий петтинг. Работа с ldap, бинарными данными и протоколами, подготовка отчётов, демоны &#8212; всё то, для чего php считается не очень приспособленным, но хорошо вписывается в общую инфраструктуру и кое-как справляется. Было очень интересно, вещи действительно не тривиальные.</p>
+<p>Затем <strong>Дмитрий Вовк</strong> показывал быстрый фреймворк для прототипирования бэкендов мобильных приложений, генерирующий <strong>JSON</strong>. Было много глупых вопросов &#8212; почему не <strong>Zend Framework</strong>. PHP &#8212; это не java, где можно пить кофе пока компилится, но тяжёлый фреймворк типа ZF в сравнении с лёгким ворует около 20 минут в день. Конечно время обычно нагоняется за счёт огромного функционала, но здесь <strong>ПРОТОТИПИРОВАНИЕ</strong>. Но, даже на таком фреймворке можно спокойно делать серьёзные вещи типа ERP.</p>
+<p>Третьим докладчиком от <strong>ТУТ БАЙ</strong> &#8212; &nbsp;<strong>Игорь Обернихин</strong>. Интерес доклада заключался в том, как происходит переход олдсукульного проекта на новые рельсы. Как стало понятно всё новое внедряется постепенно и не в полном объёме, адаптируясь под требования их бизнес модели. Опять же зал отжигал вопросами &#171;Почему не <strong>SCRUM</strong>&#171;, &#171;Почему не <strong>mercurial</strong>&#187; , забывая о возрасте проекта и то, что это не аутсорсинг. У меня сложилось впечатление, что у них <strong>слишком много менеджеров</strong>, влияющих на разработку, поэтому проект качественно медленно развивается и растёт лишь в ширь за счёт интеграции сервисов и сторонних проектов. После доклада Игорь ответил на вопрос о <strong>wordpress</strong>, применяющийся для их блогов, его таки пришлось допиливать.</p>
+<p>И вот дошли до главного <strong>эпик фейла</strong> субботней встречи &#8212; в перерыве нас угощали пиццей и это была не из обожаемого&nbsp;<strong>Pizza Peperoni</strong>. Я словно окунулся на пару месяцев назад в тёмное прошлое, когда солнце было не такое яркое, небо не такое синее, а пицца не такая фантастически вкусная.</p>
+<p>После обеда должен был быть доклад про Drupal, но, к счастью, его не случилось, и организаторы попросили стартапщиков рассказать о проблемах возникающих у них на проекте, нашлось двое смелых. Первый спрашивал о <strong>многопоточной обработке в php </strong>и сводился к использованию очередей (German, RabbitMQ) совместно с паттернами Unit of Work + Command. Правильный ответ сходу дал следующий стартапщик, разрабатывающий <a href="http://extremer.by" target="_blank">портал экстремальной жизни</a>. Он же затем спрашивал как решить проблему со скоростью выборок много ко много в SQL, задача усугублялась использованием ORM. Здесь уж я взял слова и предложил три варианта:<br />
+1. денормализация и хранение ссылок в дополнительном поле в сериализованном виде.<br />
+2. тупейший совет использовать mongo, который абсолютно не &nbsp;подходит к задаче, но звучал солидно за счёт NoSQL.<br />
+3. вроде самый адекватный выход &#8212; не использовать JOIN, а делать парочку простых запросов по Pk, дополнив это кешем.<br />
+4. Сам вопрошающий дополнил третий совет возможностью использовать <a href="http://l-o-n-g.livejournal.com/153756.html" target="_blank">HandlerSocket</a> для MySQL.<br />
+Ребята в принципе оба знали как решать свою проблему и лишь интересовались вариантами. А вот разработчик экстремального портала и вовсе кабан в программировании, которому сложно рассказать о чём-то новом, чего бы он не знал.</p>
+<p>Рассказ про <strong>ModX </strong>я хотел было пропустить, но остался и не зря. Иван Климчук здорово отстрелялся, тем более я был немного в теме, наши дорожки с этой CMF как-то пересекались. Система растёт, развивается и становится не такой ужасной, а местами даже очень вкусной. Идея дерева объектов, ИМХО, идеальна для небольших и средних проектов.</p>
+<p>И самое сладенькое &#8212; представитель <strong>ПронтоСофт Максим Барышников</strong>. Ребята делают настоящие хайлоды. Максим рассказал пару историй о проекте <strong>irr </strong>и про то, как они слезли с иглы баннерокрутилки и сделали свою с блекджеком&#8230; Естественно, сложно рассказать &nbsp;в докладе что-то новое про хайлоды, здесь кроме архитектурных решений важна ещё и реализация. Хотелось бы чтобы ПронтоСофт почаще показывала люду своих бойцов, чтобы они делились опытом, а то на конференции было целых три представителя <strong>украинского офиса Ciklum</strong>.</p>
+<p>Ну и напоследок <strong>Сергей Парижский</strong> рассказывал про боянистые бояны и безопасности в PHP. Те кто считает что бояны плохо &#8212; вам в <a href="http://tema.livejournal.com/94921.html" target="_blank">врачу Артемию Лебедеву</a>. Подобную тему нужно поднимать на каждой конференции по php, давайте будем делать интернет безопаснее.</p>
+<p>Организаторы сумели добавить сочку в сухое айтишное мероприятие, разрешили задавать вопросы по ходу и обсуждения <strong>шли настолько живо</strong>, что в twitter кто-то даже жаловался, мол никто из докладчиков не подготовился толком. Ясное дело &#8212; это полнейший бред, никто из докладчиков не плавал, что при формате близком к митапу &#8212; серьёзное достижение. В twitter скепсиса было очень много, но это типичная позиция&nbsp;белорусов&nbsp;&#8212; <strong>не&nbsp;участвовал, но осуждаю</strong>. Я тоже по началу не радовался &nbsp;ModX и Drupal, но <strong>поучаствовал и проникся</strong>.</p>
+<p>Ну а про <strong>афтопати</strong> рассказывать не буду, только намекну, что было так хорошо, что всё закончилось ближе к утру в <strong>Doodah King</strong>, где мы наслаждались живой музыкой.</p>
+<p><strong>Спасибо ОГРОМНОЕ всем, кто организовал и&nbsp;участвовал&nbsp;в этом празднике.</strong></p>
+<p>p.s. У меня за понедельник уже 3 предложение о работе, так что конференции это хорошая площадка где можно людей посмотреть и себя показать. &nbsp;Даже модераторство в phpclub, не даёт такого профита :(. Но я работой пока активно не интересуюсь, как минимум до осени на вольных хлебах.</p>
+	</div><!-- .entry-content -->
+
+	<span class="entry-tags">
+		<span class="tag-links"> <a href="http://amdy.su/tag/ciklum/" rel="tag">ciklum</a> <a href="http://amdy.su/tag/drupal/" rel="tag">drupal</a> <a href="http://amdy.su/tag/modx/" rel="tag">modx</a> <a href="http://amdy.su/tag/php/" rel="tag">PHP</a> <a href="http://amdy.su/tag/%d0%b1%d0%b5%d0%b7%d0%be%d0%bf%d0%b0%d1%81%d0%bd%d0%be%d1%81%d1%82%d1%8c/" rel="tag">безопасность</a> <a href="http://amdy.su/tag/konferentsiya/" rel="tag">конференция</a></span>			
+			</span><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+		<div class="entry-related clear">
+			<h3>Вам также <span>может понравиться</span></h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/">Недостатки laravel</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/">Проблемы с обновлением ubuntu</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+<div class="author-box clear">
+	<a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=120&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=240&#038;d=mm&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' /></a>
+	<div class="author-meta">	
+		<h4 class="author-name">About the Author: <span><a href="http://amdy.su/author/amdy/">amdy</a></span></h4>	
+		<div class="author-desc">
+					</div>
+	</div>
+</div><!-- .author-box -->
+
+<div id="comments" class="comments-area">
+
+			<h4 class="comments-title">
+			2 комментария		</h4>
+
+		
+		<ol class="comment-list">
+					<li id="comment-22409" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-22409" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/367b137250cbf83eb7769ca4d9322cd9?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/367b137250cbf83eb7769ca4d9322cd9?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://facebook.com/WAREZMasta' rel='external nofollow ugc' class='url'>SpAwN_gUy</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2011/08/15/ciklum-php-saturday/#comment-22409">
+							<time datetime="2011-08-17T12:51:33+03:00">
+								17 августа, 2011 в 12:51							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>в Дуде посидели зачетно 🙂<br />
+как с тобой сконтачиться-то?<br />
+//если чо я барадатая и валасатая куйня в белой майке 🙂</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2011/08/15/ciklum-php-saturday/?replytocom=22409#respond' data-commentid="22409" data-postid="458" data-belowelement="div-comment-22409" data-respondelement="respond" aria-label='Комментарий к записи SpAwN_gUy'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22416" class="comment byuser comment-author-amdy bypostauthor odd alt depth-2">
+			<article id="div-comment-22416" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2011/08/15/ciklum-php-saturday/#comment-22416">
+							<time datetime="2011-08-29T15:24:13+03:00">
+								29 августа, 2011 в 15:24							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>все мои контакты прямо здесь <a href="http://amdy.su/contacts/" rel="nofollow ugc">http://amdy.su/contacts/</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2011/08/15/ciklum-php-saturday/?replytocom=22416#respond' data-commentid="22416" data-postid="458" data-belowelement="div-comment-22416" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Добавить комментарий <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2011/08/15/ciklum-php-saturday/#respond" style="display:none;">Отменить ответ</a></small></h3><form action="http://amdy.su/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Ваш адрес email не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Комментарий</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Имя <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Сайт</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><noscript>
+						  <div>
+							<div style="width: 302px; height: 422px; position: relative;">
+							  <div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg"
+										frameborder="0" scrolling="no"
+										style="width: 302px; height:422px; border-style: none;">
+								</iframe>
+							  </div>
+							</div>
+							<div style="width: 300px; height: 60px; border-style: none;
+										   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+										   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+							  <textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
+										   class="g-recaptcha-response"
+										   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+												  margin: 10px 25px; padding: 0px; resize: none;" ></textarea>
+							</div>
+						  </div>
+						</noscript><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий" /> <input type='hidden' name='comment_post_ID' value='458' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="23c5a693de" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="158"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer">
+
+				
+		<div id="site-bottom" class="container clear">
+
+			<div class="site-info">Авторские права &copy; 2021 <a href="http://amdy.su/" title="AmdY"><span>AmdY</span></a>. Все права защищены.<br>Тема: VT Blogging от <a href="https://volthemes.com/theme/vt-blogging-pro/" target="_blank" title="VolThemes"><span>VolThemes</span></a>. Работает на <a href="https://wordpress.org" target="_blank" title="WordPress"><span>WordPress</span></a>.</div>			
+
+		</div><!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+	
+</div><!-- #page -->
+
+			<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof wc_checkout_params !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="https://www.google.com/recaptcha/api.js?onload=anr_onloadCallback&#038;render=explicit"
+				async defer>
+			</script>
+				<div id="back-top">
+		<a href="#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ расширить источник';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Не удается найти кисть для: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Пакет не был настроен для опции html-script: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/amdy.su\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV&#038;ver=3.0'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/comment-reply.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/superfish.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.slicknav.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/modernizr.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/html5shiv.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.custom.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/wp-embed.min.js?ver=5.4.4'></script>
+<script async="async" type='text/javascript' src='http://amdy.su/wp-content/plugins/akismet/_inc/form.js?ver=4.1.5'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+</body>
+</html>

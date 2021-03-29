@@ -1,0 +1,109 @@
+{
+    "1": {
+        "Как исправить проблему с установкой viber в kubuntu 18.04": "http://amdy.su/2018/07/13/%d0%ba%d0%b0%d0%ba-%d0%b8%d1%81%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d1%82%d1%8c-%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%83-%d1%81-%d1%83%d1%81%d1%82%d0%b0%d0%bd%d0%be%d0%b2%d0%ba%d0%be%d0%b9-viber/",
+        "Рефакторинг блога.": "http://amdy.su/2018/07/06/%d1%80%d0%b5%d1%84%d0%b0%d0%ba%d1%82%d0%be%d1%80%d0%b8%d0%bd%d0%b3-%d0%b1%d0%bb%d0%be%d0%b3%d0%b0/",
+        "Недостатки laravel": "http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/",
+        "Проблемы с обновлением ubuntu": "http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/",
+        "Continuous Integration, delivery, deployment": "http://amdy.su/2015/03/04/continuous-integration-delivery-deployment/",
+        "Модули в angularjs": "http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/",
+        "Итоги 2014": "http://amdy.su/2014/12/31/itogi-2014/",
+        "Continuous integration с Jenkins": "http://amdy.su/2013/10/20/continuous-integration-with-jenkins/",
+        "ORDER BY FIELD в Laravel": "http://amdy.su/2013/09/19/order-by-field-v-laravel/",
+        "Laravel-4": "http://amdy.su/2013/06/01/laravel-4/"
+    },
+    "2": {
+        "Шаблон для PHP приложений": "http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/",
+        "Паттерн Decorator": "http://amdy.su/2013/02/11/pattern-decorator/",
+        "Вкусности twig": "http://amdy.su/2012/09/28/twig-goodies/",
+        "Паттерн Money.": "http://amdy.su/2012/03/04/pattern-money/",
+        "AJAX в Zend Framework": "http://amdy.su/2011/12/08/ajax-in-zend-framework/",
+        "Meetup в Гродно: дизайн и юзабилити": "http://amdy.su/2011/11/28/meetup-in-grodno-design-and-usability/",
+        "Комбинаторика, нахождение слагаемых по сумме": "http://amdy.su/2011/11/22/conbinatorics-find-summand-by-sum/",
+        "Ciklum PHP Saturday": "http://amdy.su/2011/08/15/ciklum-php-saturday/",
+        "Yandex и приватные данные": "http://amdy.su/2011/07/28/yandex-and-private-data/",
+        "Задание на php для новичка": "http://amdy.su/2011/07/23/task-on-php-for-junior/"
+    },
+    "3": {
+        "Социальная безысходность Google": "http://amdy.su/2011/07/04/sotial-hopelessnees-of-google/",
+        "Убиваем плохой плагин без загрузки netbeans": "http://amdy.su/2011/06/30/kill-bad-plugin-without-loading-netbeans/",
+        "Тестовое задание и вопросы на собеседовании для программиста": "http://amdy.su/2011/06/23/testovoe-zadanie-i-voprosyi-na-sobesedovanii-dlya-programmista/",
+        "Разработка на фреймворке fatfree": "http://amdy.su/2011/06/17/developing-by-fatfree/",
+        "Парочка скриншотов рабочего стола программиста": "http://amdy.su/2011/06/08/parochka-skrinshotov-rabochego-stola-programmista/",
+        "SEO советы для разработчиков": "http://amdy.su/2011/03/29/seo-for-developers/",
+        "Шутливый код на майку": "http://amdy.su/2011/01/24/jokular-code-for-tshirt/",
+        "Отчёт о «Всемирном дне юзабилити» в Минске": "http://amdy.su/2010/11/21/wudby/",
+        "Учёт времени работы": "http://amdy.su/2010/09/15/uchyot-vremeni-rabotyi/",
+        "С днём программиста.": "http://amdy.su/2010/09/13/programmer-day/"
+    },
+    "4": {
+        "2 года": "http://amdy.su/2010/08/31/2-years/",
+        "PHP для новичков": "http://amdy.su/2010/08/22/php-for-junior/",
+        "Рабочее место программиста": "http://amdy.su/2010/08/09/programmer-worksplace/",
+        "Красивый var_dump с xdebug": "http://amdy.su/2010/08/08/nice-var_dump-with-xdebug/",
+        "Класс запроса — Request": "http://amdy.su/2010/07/25/class-request/",
+        "Привет типизация": "http://amdy.su/2010/05/20/hello-typing/",
+        "Типизация в php": "http://amdy.su/2010/05/15/typing-in-php/",
+        "Забираем почту с tut на gmail": "http://amdy.su/2010/05/07/mail-from-tut-to-gmail/",
+        "Пишем свой велосипед: часть 0": "http://amdy.su/2010/04/24/writing-your-bike-part-0/",
+        "Ищем сотрудника.": "http://amdy.su/2010/03/30/search-worker/"
+    },
+    "5": {
+        "Conversion, software version 7.0": "http://amdy.su/2010/02/18/version-7-0/",
+        "Хватит нас позорить": "http://amdy.su/2010/02/11/stop-shame/",
+        "Пример использования ArrayAccess": "http://amdy.su/2010/02/01/use-arrayaccess/",
+        "Я сменил работу.": "http://amdy.su/2010/01/23/i-change-work/",
+        "Моя реализация ЧПУ": "http://amdy.su/2010/01/14/chpu/",
+        "Работа с формами": "http://amdy.su/2010/01/13/work-with-forms/",
+        "Смешиваем singleton и registry": "http://amdy.su/2010/01/11/mix-singleton-and-registry/",
+        "Паттерн: Singleton": "http://amdy.su/2009/12/30/pattern-singleton/",
+        "Обустраиваем Zend Studio": "http://amdy.su/2009/12/26/better-zend-studio/",
+        "Беларуский сайт для фрилансеров.": "http://amdy.su/2009/12/11/belarusian-freelancer/"
+    },
+    "6": {
+        "Обновился Netbeans": "http://amdy.su/2009/12/10/update-netbeans/",
+        "Переезд": "http://amdy.su/2009/12/03/pereezd/",
+        "Автоматическое обновление плагинов WordPress": "http://amdy.su/2009/11/28/update_plugin_wp/",
+        "Вконтакт сломан, сново": "http://amdy.su/2009/11/16/vkontakte-sloman-snovo/",
+        "Блог сново оживёт": "http://amdy.su/2009/11/07/blog-snovo-zhiv/",
+        "Отчёт о конференции «Байнет 2.3 Gamma»": "http://amdy.su/2009/05/20/otchyot-o-konferentsii-baynet-23-gamma/",
+        "Конференция “Байнет 2.3 Gamma: в новом формате веба”": "http://amdy.su/2009/05/11/konferentsiya-baynet-23-gamma-v-novom-format/",
+        "Google: империя зла?": "http://amdy.su/2009/04/06/google-imperiya-zla/",
+        "Компания microsoft открыла код MVC фреймворка для ASP.NET": "http://amdy.su/2009/04/04/kompaniya-microsoft-otkryila-kod-mvc-freymvorka-dl/",
+        "Паттерн: Registry": "http://amdy.su/2009/04/02/pattern-registry/"
+    },
+    "7": {
+        "Опера: Speed Dial": "http://amdy.su/2009/03/28/opera-speed-dial/",
+        "Работа с сессиями.": "http://amdy.su/2009/03/27/work-with-session/",
+        "Константы": "http://amdy.su/2009/03/20/konstantyi/",
+        "Перезд фида": "http://amdy.su/2009/02/08/perezd-fida/",
+        "Дермократия": "http://amdy.su/2008/12/23/dermokratiya/",
+        "Кодировки": "http://amdy.su/2008/12/16/encoding/",
+        "Персональны аттестат webmoney.": "http://amdy.su/2008/12/10/personalnyi-attestat-webmoney/",
+        "PHP: доунгрейд до 5.2.6": "http://amdy.su/2008/12/08/php-doungreyd-do-526/",
+        "Обновляемся до версии PHP 5.2.7": "http://amdy.su/2008/12/07/obnovlyaemsya-do-versii-php-527/",
+        "Doctrine 1.1 Alpha": "http://amdy.su/2008/12/03/doctrine-11-alpha/"
+    },
+    "8": {
+        "SPL в  PHP: ArrayObject": "http://amdy.su/2008/12/02/spl-in-php-arrayobject/",
+        "Футурама тест": "http://amdy.su/2008/12/01/86/",
+        "Шаблоны и View": "http://amdy.su/2008/11/29/template-and-view/",
+        "Flash сообщения 2": "http://amdy.su/2008/11/27/flash-message-2/",
+        "Как найти BOM": "http://amdy.su/2008/11/25/find-bom/",
+        "Новая версия Zend Framework — 1.7": "http://amdy.su/2008/11/18/novaya-versiya-zend-framework-17/",
+        "Свой шаблонизатор 2": "http://amdy.su/2008/11/15/own-templater-2/",
+        "Свой шаблонизатор": "http://amdy.su/2008/11/12/own-templater/",
+        "Кросбраузерная вёрстка": "http://amdy.su/2008/11/11/krosbrauzernaya-vyorstka/",
+        "Flash сообщения": "http://amdy.su/2008/11/08/flash-message/"
+    },
+    "9": {
+        "Чёрный пиар. Сокрытие доходов и неуплата налогов гражданами белоруси.": "http://amdy.su/2008/11/06/chyornyiy-piar-sokryitie-dohodov-i-neupla/",
+        "Facebook выложила некоторые исходники.": "http://amdy.su/2008/10/29/facebook-vyilozhila-nekotoryie-ishodniki/",
+        "Маленькая месть спамерам.": "http://amdy.su/2008/10/23/malenkaya-mest-spameram/",
+        "Облако тегов.": "http://amdy.su/2008/10/17/oblako-tegov/",
+        "О плохих шаблонизаторах": "http://amdy.su/2008/10/15/o-plohih-shablonizatorah/",
+        "Шаблонизация: Что, где, как": "http://amdy.su/2008/10/15/template-what-is/",
+        "Формы и Safari": "http://amdy.su/2008/10/02/formyi-i-safari/",
+        "Немножко о  траблах": "http://amdy.su/2008/08/31/nemnozhko-o-trablah/",
+        "Дождался": "http://amdy.su/2008/08/31/dozhdalsya/"
+    }
+}

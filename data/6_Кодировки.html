@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Кодировки &#8212; AmdY</title>
+<link rel='dns-prefetch' href='//amdy.su' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента" href="http://amdy.su/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев" href="http://amdy.su/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев к &laquo;Кодировки&raquo;" href="http://amdy.su/2008/12/16/encoding/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-6704399-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-6704399-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/amdy.su\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://amdy.su/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://amdy.su/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/style.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/assets/fonts/genericons/genericons.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/responsive.css?ver=1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/amdy.su","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://amdy.su/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://amdy.su/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://amdy.su/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Персональны аттестат webmoney.' href='http://amdy.su/2008/12/10/personalnyi-attestat-webmoney/' />
+<link rel='next' title='Дермократия' href='http://amdy.su/2008/12/23/dermokratiya/' />
+<meta name="generator" content="WordPress 5.4.4" />
+<link rel="canonical" href="http://amdy.su/2008/12/16/encoding/" />
+<link rel='shortlink' href='http://amdy.su/?p=112' />
+<link rel="alternate" type="application/json+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2008%2F12%2F16%2Fencoding%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2008%2F12%2F16%2Fencoding%2F&#038;format=xml" />
+<link rel="pingback" href="http://amdy.su/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="post-template-default single single-post postid-112 single-format-standard group-blog">
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div class="container">
+
+			<div class="site-branding">
+			
+									<h1 class="site-title"><a href="http://amdy.su/" title="AmdY" rel="home">AmdY</a></h1>
+					<h2 class="site-description">Извращение программиста</h2>
+				
+			</div><!-- .site-branding -->
+
+			<nav id="primary-nav" class="main-navigation">
+
+				<div class="menu-primary-navigation-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-520" class="menu-item menu-item-type- menu-item-object- menu-item-520"><a></a></li>
+<li id="menu-item-644" class="menu-item menu-item-type- menu-item-object- menu-item-644"><a></a></li>
+<li id="menu-item-646" class="menu-item menu-item-type- menu-item-object- menu-item-646"><a></a></li>
+<li id="menu-item-645" class="menu-item menu-item-type- menu-item-object- menu-item-645"><a></a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://amdy.su/contacts/">Контакты</a></li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+							<span class="search-icon">
+					<span class="genericon genericon-search"></span>
+					<span class="genericon genericon-close"></span>			
+				</span>
+				
+
+			<div id="slick-mobile-menu"></div>
+		
+		</div><!-- .container -->
+
+	</header><!-- #masthead -->
+
+			<div class="header-search">
+			<div class="container">
+				
+<form id="searchform" role="search" method="get" action="http://amdy.su/">
+	<span class="screen-reader-text">Поиск:</span>
+	<input type="search" class="search-input" placeholder="Поиск..." value="" name="s" title="Поиск:" />
+	<button type="submit" role="button" class="search-submit">Поиск</button>
+</form>			</div>
+		</div><!-- .header-search -->
+	
+	<div id="content" class="site-content container clear">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" >
+
+			
+<article id="post-112" class="post-112 post type-post status-publish format-standard hentry category-programming tag-encoding tag-mysql tag-php tag-usability tag-43">
+	<header class="entry-header">	
+		<h1 class="entry-title">Кодировки</h1>
+		<div class="entry-meta clear">
+			<span class="entry-author"><a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=96&#038;d=mm&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' /></a> Создано автором <a href="http://amdy.su/author/amdy/" title="Записи amdy" rel="author">amdy</a></span>
+			<span class="entry-date">16 декабря, 2008</span>
+			<span class="entry-category">в <a href="http://amdy.su/category/programming/" title="Посмотреть все записи в Программирование" >Программирование</a> </span>
+		</div><!-- .entry-meta -->
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+	
+				
+		<p>Как это не странно, но до сих пор очень часто многие начинающие задают вопрос о кодироках, вернее о &#171;неправильном&#187; отображении русских буковок. Постараю описать все по порядку, следуя данному списку инструкций у меня никогда не возникало проблем с кодировками.<span id="more-112"></span></p>
+<p>Перый шаг &#8212; настройка вашего любимого редактора. Ищем пункт encoding (кодировки) и ставим utf-8. Очень советую использоать именно юникод, чтобы избежать проблем в дальнейшем. Конечно, у юникода есть ряд недостатков, но пользы гораздо больше. Ах, да, ещё пару советов по настройке редактора.&nbsp;Выставьте&nbsp;конец строки в стиле unix  &#8212; \n, и используйте 4 пробела вместо табов.</p>
+<p>Второй шаг &#8212; HTML. Добавляем строку</p>
+<pre lang="html">&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+в &lt;head&gt;&lt;/head&gt;</pre>
+<p>Третий шаг &#8212; РНР. Некоторые браузеры пренебрегают  Content-Type и используют кодироку, посылаемую сервером, обычно по умолчанию iso-8859-1(latin1). Значит мы посылаем нужную нам &#8212;</p>
+<pre lang="php">header('Content-type: text/html; charset=utf-8');</pre>
+<p>Четвёртый шаг &#8212; базы данных. Обычно данные берутся из базы данных, поэтому при создание таблиц и полей не забываем указывать нужную кодировку &#8212; utf8_general_ci. Обратите внимание, что именно general_ci, а не bin, как любят многие, это позволяет работать с данными как со строками, а не с двоичными данными. Но хостере и здесь заготовили подвох, и по умолчанию чаще стоит другая кодировка. Поэтому предупредим MySQL, что собираемся работать именно с utf-8, для этого сразу после подключения посылаем запрос:</p>
+<pre lang="mysql">SET NAMES utf8</pre>
+<p>Обратите внимание, что в названии кодировки нету дефиса. Некоторые советуют посылать ещё парочку, но у меня такой надобности не возникало.</p>
+<p>Пятый шаг &#8212; если таки данные берутся из другой кодироки, для этого используется функция iconv(), которая конвертирует данные из одной кодировки в другую. На некоторых хостингах нету сего полезного расширения, но я предлогаю игнорировать хостинги с ненастроенным РНР и неустановленными популярными расширениями.</p>
+<p>Дерзайте, все неудачные попытки конспектируйте и задавайте вопросы.</p>
+<p>p.s. Ещё статья по теме о <a href="http://amdy.su/find-bom/" class="">зловредном BOM</a>.</p>
+	</div><!-- .entry-content -->
+
+	<span class="entry-tags">
+		<span class="tag-links"> <a href="http://amdy.su/tag/encoding/" rel="tag">encoding</a> <a href="http://amdy.su/tag/mysql/" rel="tag">mysql</a> <a href="http://amdy.su/tag/php/" rel="tag">PHP</a> <a href="http://amdy.su/tag/usability/" rel="tag">usability</a> <a href="http://amdy.su/tag/%d0%ba%d0%be%d0%b4%d0%b8%d1%80%d0%be%d0%b2%d0%ba%d0%b0/" rel="tag">кодировка</a></span>			
+			</span><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+		<div class="entry-related clear">
+			<h3>Вам также <span>может понравиться</span></h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/">Недостатки laravel</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="http://amdy.su/2015/03/04/continuous-integration-delivery-deployment/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2015/03/04/continuous-integration-delivery-deployment/">Continuous Integration, delivery, deployment</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+<div class="author-box clear">
+	<a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=120&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=240&#038;d=mm&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' /></a>
+	<div class="author-meta">	
+		<h4 class="author-name">About the Author: <span><a href="http://amdy.su/author/amdy/">amdy</a></span></h4>	
+		<div class="author-desc">
+					</div>
+	</div>
+</div><!-- .author-box -->
+
+<div id="comments" class="comments-area">
+
+			<h4 class="comments-title">
+			12 комментариев		</h4>
+
+		
+		<ol class="comment-list">
+					<li id="comment-102" class="comment even thread-even depth-1">
+			<article id="div-comment-102" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/e4df55d1edc85d23222be9afa11133fe?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e4df55d1edc85d23222be9afa11133fe?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Gavr</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-102">
+							<time datetime="2009-01-05T15:26:31+02:00">
+								5 января, 2009 в 15:26							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>норма написал ))<br />
+только есть вопросик<br />
+юзаю phpmyadmin и когда заношу русскую инфу в базу sql вроде все ок заносит а когда пытаюсь просмотреть аттуда много вапросикав!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=102#respond' data-commentid="102" data-postid="112" data-belowelement="div-comment-102" data-respondelement="respond" aria-label='Комментарий к записи Gavr'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-130" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-130" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/6a29f4c1f51a62d93bbef632617c5a48?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6a29f4c1f51a62d93bbef632617c5a48?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Wing</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-130">
+							<time datetime="2009-01-26T20:08:55+02:00">
+								26 января, 2009 в 20:08							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>2Gavr<br />
+При импорте дампа через phpmyadmin можно указать предположительную (нужную) кодировку, если внутри самого sql файла она не указывается.</p>
+<p>Есть еще пара полезных функций – utf8_encode / utf8_decode – используются в случае если кодировку источника или страницы отображения не представляется возможным изменить самостоятельно.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=130#respond' data-commentid="130" data-postid="112" data-belowelement="div-comment-130" data-respondelement="respond" aria-label='Комментарий к записи Wing'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-131" class="comment even thread-even depth-1">
+			<article id="div-comment-131" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/6a29f4c1f51a62d93bbef632617c5a48?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6a29f4c1f51a62d93bbef632617c5a48?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Wing</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-131">
+							<time datetime="2009-01-26T20:24:21+02:00">
+								26 января, 2009 в 20:24							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Дальнейшее для популяризации топика ))<br />
+Некоторые функции в php по умолчанию забирают данные в utf8, например, file_get_contents. И тут в начале может присуствовать идентификатор byte order mark (BOM), вот полезная php функция, ответ на вопрос как избавиться от BOM:<br />
+function RemoveBOM( $data )<br />
+{<br />
+if(substr($data, 0,3) == pack(&#171;CCC&#187;,0xef,0xbb,0xbf))<br />
+	{<br />
+		$data=substr($data, 3);<br />
+	}<br />
+return $data;<br />
+}</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=131#respond' data-commentid="131" data-postid="112" data-belowelement="div-comment-131" data-respondelement="respond" aria-label='Комментарий к записи Wing'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-132" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-132" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/6a29f4c1f51a62d93bbef632617c5a48?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/6a29f4c1f51a62d93bbef632617c5a48?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Wing</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-132">
+							<time datetime="2009-01-26T20:29:04+02:00">
+								26 января, 2009 в 20:29							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Кстати у textarea id=&#187;comment&#187; проблемы с прокруткой – она, вроде, и есть и вроде ее нет, то есть при печати не прокручивается вниз.<br />
+(Firefox 3.0.4)</p>
+<p>Это сообщение можно удалить после прочтения 🙂</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=132#respond' data-commentid="132" data-postid="112" data-belowelement="div-comment-132" data-respondelement="respond" aria-label='Комментарий к записи Wing'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-140" class="comment byuser comment-author-amdy bypostauthor even thread-even depth-1">
+			<article id="div-comment-140" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su/' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-140">
+							<time datetime="2009-01-27T17:39:09+02:00">
+								27 января, 2009 в 17:39							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Wing спасибо. Про входные данные я не подумал, кстати, эта тема достойна отдельного поста. Сейчас времени на блог нету, только отбился от военкомата, началась сессия, а ещё работа&#8230;.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=140#respond' data-commentid="140" data-postid="112" data-belowelement="div-comment-140" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-144" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-144" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/433485f967c27340eb1795be7a4de4a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/433485f967c27340eb1795be7a4de4a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Wing</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-144">
+							<time datetime="2009-01-29T22:19:05+02:00">
+								29 января, 2009 в 22:19							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>А еще некоторые проблемы с кодировкой удается решить на уровне настройки сервера.<br />
+Далее из небольшого личного опыта так сказать ))<br />
+Проблемы с кодировкой valuehost (валуехост) решаются добавлением в .htaccess директивы:</p>
+<p>CharsetSourceEnc utf-8</p>
+<p>(такая проблема часто возникает при установке WordPress)</p>
+<p>Проблемы кодировками (отличными от utf-8) у naunet (наунет) решаются добавлением в .htaccess директивы AddDefaultCharset, которая явно задает кодировку в ответе content-type, выглядит это примерно так:</p>
+<p>AddDefaultCharset cp1251</p>
+<p>Думаю, у прямых пользователей хостинга Зенон Н.С.П. могут быть такие же проблемы.<br />
+Вот. Нашел в этом блоге несколько отличных идей, и решил оставить пару полезных комментариев ))</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=144#respond' data-commentid="144" data-postid="112" data-belowelement="div-comment-144" data-respondelement="respond" aria-label='Комментарий к записи Wing'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-324" class="comment even thread-even depth-1">
+			<article id="div-comment-324" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/4f577c08d198ba6d65417ef1962e8653?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4f577c08d198ba6d65417ef1962e8653?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Герц</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-324">
+							<time datetime="2009-04-05T09:45:40+03:00">
+								5 апреля, 2009 в 09:45							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Раньше пользовал set names utf8, тоже предпочитаю именно эту кодировку, сейчас решил вместо этого настрочить конструктор в классе:</p>
+<p>connect = @mysqli_connect($db_host, $db_root, $db_pass, $db_name) or die (&#171;К базе зацепиться не можем&#187;);<br />
+		$this-&gt;charset = @mysqli_set_charset($this-&gt;connect, &#171;utf8&#187;);<br />
+	}</p>
+<p>?&gt;</p>
+<p>Насчёт избавления от bom, интересная реализация, попробую на практике 🙂 Хотя, в принципе, логичнее изначально сохранять файл без этой метки — меньше гемора в дальнейшем 🙂</p>
+<p>Вообще парни, тему красиво раскрыли 🙂</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=324#respond' data-commentid="324" data-postid="112" data-belowelement="div-comment-324" data-respondelement="respond" aria-label='Комментарий к записи Герц'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-325" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-325" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/4f577c08d198ba6d65417ef1962e8653?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4f577c08d198ba6d65417ef1962e8653?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Герц</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-325">
+							<time datetime="2009-04-05T09:46:56+03:00">
+								5 апреля, 2009 в 09:46							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Млин, полфункции обрезало 🙁</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=325#respond' data-commentid="325" data-postid="112" data-belowelement="div-comment-325" data-respondelement="respond" aria-label='Комментарий к записи Герц'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-1006" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-1006" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/597cc31b138964ffd039ff3c5eaa7ade?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/597cc31b138964ffd039ff3c5eaa7ade?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://oldoctober.com/' rel='external nofollow ugc' class='url'>oldoctober.com</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-1006">
+							<time datetime="2010-03-11T23:08:33+02:00">
+								11 марта, 2010 в 23:08							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Мало что понял из написанного выше, но зато понял,  что Вы понимаете толк в кодировках. В Google набрал &#171;bin general_ci phphbb3&#187; и получил всего несколько страниц, но ответа на свои вопросы не нашёл.</p>
+<p>Вопросы такие. В какой кодировке должны быть таблицы базы данных PHPBB3?<br />
+Они у мне в utf8_bin (сравнение utf8_general_ci). </p>
+<p>Нужно ли перекодировать таблицы и из utf8_bin в utf8_general_ci? </p>
+<p>Если да, то как это можно сделать?</p>
+<p>Рассчитываю на Вашу помощь. Заранее благодарю!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=1006#respond' data-commentid="1006" data-postid="112" data-belowelement="div-comment-1006" data-respondelement="respond" aria-label='Комментарий к записи oldoctober.com'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-1007" class="comment byuser comment-author-amdy bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-1007" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-1007">
+							<time datetime="2010-03-11T23:23:34+02:00">
+								11 марта, 2010 в 23:23							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>bin указывает, что данные бинарные, по идее это должно давать скорость при поиске, utf8_general_ci учитывает кодировки, это замедлит поиск, но зато даст возможность регитронезависимого ( Вася == вася ), а при бинарном это не одно и то же.<br />
+Советую всё же пользоваться utf8_general_ci</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=1007#respond' data-commentid="1007" data-postid="112" data-belowelement="div-comment-1007" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-1008" class="comment even depth-3">
+			<article id="div-comment-1008" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/597cc31b138964ffd039ff3c5eaa7ade?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/597cc31b138964ffd039ff3c5eaa7ade?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://oldoctober.com/' rel='external nofollow ugc' class='url'>oldoctober.com</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-1008">
+							<time datetime="2010-03-12T00:09:58+02:00">
+								12 марта, 2010 в 00:09							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Спасибо! А как перекодировать из bin в general_ci?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=1008#respond' data-commentid="1008" data-postid="112" data-belowelement="div-comment-1008" data-respondelement="respond" aria-label='Комментарий к записи oldoctober.com'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-46902" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-46902" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/69e014e055800da8ebc44b59bf5b4db8?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/69e014e055800da8ebc44b59bf5b4db8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Alexey</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2008/12/16/encoding/#comment-46902">
+							<time datetime="2019-01-02T16:01:33+03:00">
+								2 января, 2019 в 16:01							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Спасибо!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2008/12/16/encoding/?replytocom=46902#respond' data-commentid="46902" data-postid="112" data-belowelement="div-comment-46902" data-respondelement="respond" aria-label='Комментарий к записи Alexey'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Добавить комментарий <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2008/12/16/encoding/#respond" style="display:none;">Отменить ответ</a></small></h3><form action="http://amdy.su/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Ваш адрес email не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Комментарий</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Имя <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Сайт</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><noscript>
+						  <div>
+							<div style="width: 302px; height: 422px; position: relative;">
+							  <div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg"
+										frameborder="0" scrolling="no"
+										style="width: 302px; height:422px; border-style: none;">
+								</iframe>
+							  </div>
+							</div>
+							<div style="width: 300px; height: 60px; border-style: none;
+										   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+										   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+							  <textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
+										   class="g-recaptcha-response"
+										   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+												  margin: 10px 25px; padding: 0px; resize: none;" ></textarea>
+							</div>
+						  </div>
+						</noscript><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий" /> <input type='hidden' name='comment_post_ID' value='112' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="924c413ec1" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="2"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer">
+
+				
+		<div id="site-bottom" class="container clear">
+
+			<div class="site-info">Авторские права &copy; 2021 <a href="http://amdy.su/" title="AmdY"><span>AmdY</span></a>. Все права защищены.<br>Тема: VT Blogging от <a href="https://volthemes.com/theme/vt-blogging-pro/" target="_blank" title="VolThemes"><span>VolThemes</span></a>. Работает на <a href="https://wordpress.org" target="_blank" title="WordPress"><span>WordPress</span></a>.</div>			
+
+		</div><!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+	
+</div><!-- #page -->
+
+			<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof wc_checkout_params !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="https://www.google.com/recaptcha/api.js?onload=anr_onloadCallback&#038;render=explicit"
+				async defer>
+			</script>
+				<div id="back-top">
+		<a href="#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ расширить источник';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Не удается найти кисть для: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Пакет не был настроен для опции html-script: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/amdy.su\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV&#038;ver=3.0'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/comment-reply.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/superfish.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.slicknav.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/modernizr.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/html5shiv.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.custom.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/wp-embed.min.js?ver=5.4.4'></script>
+<script async="async" type='text/javascript' src='http://amdy.su/wp-content/plugins/akismet/_inc/form.js?ver=4.1.5'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+</body>
+</html>

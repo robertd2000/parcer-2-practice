@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Шаблон для PHP приложений &#8212; AmdY</title>
+<link rel='dns-prefetch' href='//amdy.su' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента" href="http://amdy.su/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев" href="http://amdy.su/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев к &laquo;Шаблон для PHP приложений&raquo;" href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-6704399-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-6704399-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/amdy.su\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://amdy.su/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://amdy.su/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/style.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/assets/fonts/genericons/genericons.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/responsive.css?ver=1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/amdy.su","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://amdy.su/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://amdy.su/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://amdy.su/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Паттерн Decorator' href='http://amdy.su/2013/02/11/pattern-decorator/' />
+<link rel='next' title='Laravel-4' href='http://amdy.su/2013/06/01/laravel-4/' />
+<meta name="generator" content="WordPress 5.4.4" />
+<link rel="canonical" href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/" />
+<link rel='shortlink' href='http://amdy.su/?p=537' />
+<link rel="alternate" type="application/json+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2013%2F05%2F14%2Fshablon-dlya-php-prilozheniy%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2013%2F05%2F14%2Fshablon-dlya-php-prilozheniy%2F&#038;format=xml" />
+<link rel="pingback" href="http://amdy.su/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="post-template-default single single-post postid-537 single-format-standard group-blog">
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div class="container">
+
+			<div class="site-branding">
+			
+									<h1 class="site-title"><a href="http://amdy.su/" title="AmdY" rel="home">AmdY</a></h1>
+					<h2 class="site-description">Извращение программиста</h2>
+				
+			</div><!-- .site-branding -->
+
+			<nav id="primary-nav" class="main-navigation">
+
+				<div class="menu-primary-navigation-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-520" class="menu-item menu-item-type- menu-item-object- menu-item-520"><a></a></li>
+<li id="menu-item-644" class="menu-item menu-item-type- menu-item-object- menu-item-644"><a></a></li>
+<li id="menu-item-646" class="menu-item menu-item-type- menu-item-object- menu-item-646"><a></a></li>
+<li id="menu-item-645" class="menu-item menu-item-type- menu-item-object- menu-item-645"><a></a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://amdy.su/contacts/">Контакты</a></li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+							<span class="search-icon">
+					<span class="genericon genericon-search"></span>
+					<span class="genericon genericon-close"></span>			
+				</span>
+				
+
+			<div id="slick-mobile-menu"></div>
+		
+		</div><!-- .container -->
+
+	</header><!-- #masthead -->
+
+			<div class="header-search">
+			<div class="container">
+				
+<form id="searchform" role="search" method="get" action="http://amdy.su/">
+	<span class="screen-reader-text">Поиск:</span>
+	<input type="search" class="search-input" placeholder="Поиск..." value="" name="s" title="Поиск:" />
+	<button type="submit" role="button" class="search-submit">Поиск</button>
+</form>			</div>
+		</div><!-- .header-search -->
+	
+	<div id="content" class="site-content container clear">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" >
+
+			
+<article id="post-537" class="post-537 post type-post status-publish format-standard hentry category-php category-programming tag-htaccess tag-boilerplate tag-composer tag-git tag-github tag-html tag-php">
+	<header class="entry-header">	
+		<h1 class="entry-title">Шаблон для PHP приложений</h1>
+		<div class="entry-meta clear">
+			<span class="entry-author"><a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=96&#038;d=mm&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' /></a> Создано автором <a href="http://amdy.su/author/amdy/" title="Записи amdy" rel="author">amdy</a></span>
+			<span class="entry-date">14 мая, 2013</span>
+			<span class="entry-category">в <a href="http://amdy.su/category/php/" title="Посмотреть все записи в PHP" >PHP</a> </span>
+		</div><!-- .entry-meta -->
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+	
+				
+		<p>В очередной раз увидел чей-то велосипед и решил &#8212; с меня хватит. Сейчас в мире php наступила пора стандартизации и этим нужно пользоваться, хватит лепить приложения как попало. Сел, создал репозиторий  на github и заполнил его кусками из своих проектов. Все желающие могут присылать пожелания, баги, и пулл реквесты <a href="https://github.com/AmdY/php-app-skeleton" target="_blank">https://github.com/AmdY/php-app-skeleton</a>.<span id="more-537"></span></p>
+<p>Стандарты:</p>
+<p>1. <a href="https://github.com/php-fig/fig-standards/tree/master/accepted" target="_blank"><strong>PSR</strong></a> &#8212; стандарты кодирования на PHP. Формируются группой <a href="http://www.php-fig.org/" target="_blank">FIG</a>, стандарты принимаются после обсуждений в которых может участвовать каждый. В данный момент приняты 4 стандарта PSR-0 &#8212; PSR-3, они довольно спорные, но уже приняты большинством серьёзных проектов, так что нефик выделываться, просто делай это.</p>
+<p>2. <strong><a href="http://getcomposer.org/" target="_blank">Composer</a></strong> &#8212; менеджер зависимостей для PHP. Сами пакеты находятся на <a href="https://packagist.org/">https://packagist.org/</a>, туда же можно добавлять и свои наработки. Приятной особенностью является наличие автозагрузчика по PSR-0, после установки composer.</p>
+<p>3. <a href="https://github.com/sebastianbergmann/phpunit/" target="_blank"><strong>PHPUnit</strong></a> &#8212; фреймворк для тестирования. Я добавил папку для тестов (./tests/), пример оного и настройки.</p>
+<p>4.<a href="http://html5boilerplate.com/" target="_blank"> <strong>HTML5 boilerplate</strong></a> &#8212; шаблон для фронтэнда, содержит заготовки для HTML, CSS, JavaScript, дружественный к SEO и полезные плюшки для Apache. У меня версия 4.2, к сожалению она впилена не через composer, так что обновлять нужно ручками.</p>
+<p><strong>Чего нет (пока):</strong></p>
+<p>1. Bower &#8212; для управления зависимостями в JavaScript.</p>
+<p>2. Phing &#8212; сборка php проектов, аналог Ant для Java.</p>
+<p>3. Twitter bootstrap &#8212;  фронтенд фреймворк.</p>
+<p>4. Утилиты типа less, объединения и сжатия JavaScript-CSS и т.д.</p>
+<p>&nbsp;</p>
+	</div><!-- .entry-content -->
+
+	<span class="entry-tags">
+		<span class="tag-links"> <a href="http://amdy.su/tag/htaccess/" rel="tag">.htaccess</a> <a href="http://amdy.su/tag/boilerplate/" rel="tag">boilerplate</a> <a href="http://amdy.su/tag/composer/" rel="tag">composer</a> <a href="http://amdy.su/tag/git/" rel="tag">git</a> <a href="http://amdy.su/tag/github/" rel="tag">github</a> <a href="http://amdy.su/tag/html/" rel="tag">html</a> <a href="http://amdy.su/tag/php/" rel="tag">PHP</a></span>			
+			</span><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+		<div class="entry-related clear">
+			<h3>Вам также <span>может понравиться</span></h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/">Недостатки laravel</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/">Проблемы с обновлением ubuntu</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+<div class="author-box clear">
+	<a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=120&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=240&#038;d=mm&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' /></a>
+	<div class="author-meta">	
+		<h4 class="author-name">About the Author: <span><a href="http://amdy.su/author/amdy/">amdy</a></span></h4>	
+		<div class="author-desc">
+					</div>
+	</div>
+</div><!-- .author-box -->
+
+<div id="comments" class="comments-area">
+
+			<h4 class="comments-title">
+			5 комментариев		</h4>
+
+		
+		<ol class="comment-list">
+					<li id="comment-22555" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-22555" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/bd59b01b900dfa3f8dc5e794de762996?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/bd59b01b900dfa3f8dc5e794de762996?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Миша</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/#comment-22555">
+							<time datetime="2013-05-15T09:18:10+03:00">
+								15 мая, 2013 в 09:18							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>И где же там php  код?<br />
+Что это вообще за мура? 😉</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/?replytocom=22555#respond' data-commentid="22555" data-postid="537" data-belowelement="div-comment-22555" data-respondelement="respond" aria-label='Комментарий к записи Миша'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22596" class="comment odd alt depth-2 parent">
+			<article id="div-comment-22596" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/d5663ce3c72ee45c007e66a8518270ce?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d5663ce3c72ee45c007e66a8518270ce?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://malinichev.ru/' rel='external nofollow ugc' class='url'>Влад</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/#comment-22596">
+							<time datetime="2013-07-05T02:58:22+03:00">
+								5 июля, 2013 в 02:58							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Согласен, я не знаю конечно что такое composer, но php-кода я там не увидел толком&#8230;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/?replytocom=22596#respond' data-commentid="22596" data-postid="537" data-belowelement="div-comment-22596" data-respondelement="respond" aria-label='Комментарий к записи Влад'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22598" class="comment byuser comment-author-amdy bypostauthor even depth-3">
+			<article id="div-comment-22598" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/#comment-22598">
+							<time datetime="2013-07-11T16:05:48+03:00">
+								11 июля, 2013 в 16:05							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Так это и не php код, а каркас чтобы писать свой код. Вы просто клонируете проект и пишете свой код и тесты. Там есть пример отдельным коммитом <a href="https://github.com/AmdY/php-app-skeleton/commit/3d421506e1a5ab43c3fde4c51c227d40b9dbafb8" rel="nofollow ugc">https://github.com/AmdY/php-app-skeleton/commit/3d421506e1a5ab43c3fde4c51c227d40b9dbafb8</a></p>
+<p>Попереходите по ссылкам, почитайте о технологиях, чтобы можно было говорить на одном языке.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/?replytocom=22598#respond' data-commentid="22598" data-postid="537" data-belowelement="div-comment-22598" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-22638" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-22638" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/452829d234b112ffec6f3174774bd424?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/452829d234b112ffec6f3174774bd424?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://tvorazasp.com' rel='external nofollow ugc' class='url'>artem</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/#comment-22638">
+							<time datetime="2013-11-22T00:46:45+03:00">
+								22 ноября, 2013 в 00:46							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>пхарник с композером там лишний. композер постоянно обновляется и может быть установлен локально</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/?replytocom=22638#respond' data-commentid="22638" data-postid="537" data-belowelement="div-comment-22638" data-respondelement="respond" aria-label='Комментарий к записи artem'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-22639" class="comment even thread-even depth-1">
+			<article id="div-comment-22639" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/452829d234b112ffec6f3174774bd424?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/452829d234b112ffec6f3174774bd424?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://tvorzasp.com' rel='external nofollow ugc' class='url'>artem</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/#comment-22639">
+							<time datetime="2013-11-22T00:48:14+03:00">
+								22 ноября, 2013 в 00:48							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>вот отличная штука <a href="https://github.com/koriym/PHP.Skeleton" rel="nofollow ugc">https://github.com/koriym/PHP.Skeleton</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/?replytocom=22639#respond' data-commentid="22639" data-postid="537" data-belowelement="div-comment-22639" data-respondelement="respond" aria-label='Комментарий к записи artem'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Добавить комментарий <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/05/14/shablon-dlya-php-prilozheniy/#respond" style="display:none;">Отменить ответ</a></small></h3><form action="http://amdy.su/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Ваш адрес email не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Комментарий</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Имя <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Сайт</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><noscript>
+						  <div>
+							<div style="width: 302px; height: 422px; position: relative;">
+							  <div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg"
+										frameborder="0" scrolling="no"
+										style="width: 302px; height:422px; border-style: none;">
+								</iframe>
+							  </div>
+							</div>
+							<div style="width: 300px; height: 60px; border-style: none;
+										   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+										   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+							  <textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
+										   class="g-recaptcha-response"
+										   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+												  margin: 10px 25px; padding: 0px; resize: none;" ></textarea>
+							</div>
+						  </div>
+						</noscript><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий" /> <input type='hidden' name='comment_post_ID' value='537' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="5a163c6b0d" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="218"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer">
+
+				
+		<div id="site-bottom" class="container clear">
+
+			<div class="site-info">Авторские права &copy; 2021 <a href="http://amdy.su/" title="AmdY"><span>AmdY</span></a>. Все права защищены.<br>Тема: VT Blogging от <a href="https://volthemes.com/theme/vt-blogging-pro/" target="_blank" title="VolThemes"><span>VolThemes</span></a>. Работает на <a href="https://wordpress.org" target="_blank" title="WordPress"><span>WordPress</span></a>.</div>			
+
+		</div><!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+	
+</div><!-- #page -->
+
+			<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof wc_checkout_params !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="https://www.google.com/recaptcha/api.js?onload=anr_onloadCallback&#038;render=explicit"
+				async defer>
+			</script>
+				<div id="back-top">
+		<a href="#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ расширить источник';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Не удается найти кисть для: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Пакет не был настроен для опции html-script: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/amdy.su\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV&#038;ver=3.0'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/comment-reply.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/superfish.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.slicknav.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/modernizr.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/html5shiv.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.custom.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/wp-embed.min.js?ver=5.4.4'></script>
+<script async="async" type='text/javascript' src='http://amdy.su/wp-content/plugins/akismet/_inc/form.js?ver=4.1.5'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+</body>
+</html>

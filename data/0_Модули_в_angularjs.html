@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Модули в angularjs &#8212; AmdY</title>
+<link rel='dns-prefetch' href='//amdy.su' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента" href="http://amdy.su/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев" href="http://amdy.su/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев к &laquo;Модули в angularjs&raquo;" href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-6704399-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-6704399-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/amdy.su\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://amdy.su/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://amdy.su/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/style.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/assets/fonts/genericons/genericons.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/responsive.css?ver=1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/amdy.su","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://amdy.su/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://amdy.su/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://amdy.su/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Итоги 2014' href='http://amdy.su/2014/12/31/itogi-2014/' />
+<link rel='next' title='Continuous Integration, delivery, deployment' href='http://amdy.su/2015/03/04/continuous-integration-delivery-deployment/' />
+<meta name="generator" content="WordPress 5.4.4" />
+<link rel="canonical" href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/" />
+<link rel='shortlink' href='http://amdy.su/?p=648' />
+<link rel="alternate" type="application/json+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2015%2F02%2F17%2F%25d0%25bc%25d0%25be%25d0%25b4%25d1%2583%25d0%25bb%25d0%25b8-%25d0%25b2-angularjs%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2015%2F02%2F17%2F%25d0%25bc%25d0%25be%25d0%25b4%25d1%2583%25d0%25bb%25d0%25b8-%25d0%25b2-angularjs%2F&#038;format=xml" />
+<link rel="pingback" href="http://amdy.su/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="post-template-default single single-post postid-648 single-format-standard group-blog">
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div class="container">
+
+			<div class="site-branding">
+			
+									<h1 class="site-title"><a href="http://amdy.su/" title="AmdY" rel="home">AmdY</a></h1>
+					<h2 class="site-description">Извращение программиста</h2>
+				
+			</div><!-- .site-branding -->
+
+			<nav id="primary-nav" class="main-navigation">
+
+				<div class="menu-primary-navigation-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-520" class="menu-item menu-item-type- menu-item-object- menu-item-520"><a></a></li>
+<li id="menu-item-644" class="menu-item menu-item-type- menu-item-object- menu-item-644"><a></a></li>
+<li id="menu-item-646" class="menu-item menu-item-type- menu-item-object- menu-item-646"><a></a></li>
+<li id="menu-item-645" class="menu-item menu-item-type- menu-item-object- menu-item-645"><a></a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://amdy.su/contacts/">Контакты</a></li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+							<span class="search-icon">
+					<span class="genericon genericon-search"></span>
+					<span class="genericon genericon-close"></span>			
+				</span>
+				
+
+			<div id="slick-mobile-menu"></div>
+		
+		</div><!-- .container -->
+
+	</header><!-- #masthead -->
+
+			<div class="header-search">
+			<div class="container">
+				
+<form id="searchform" role="search" method="get" action="http://amdy.su/">
+	<span class="screen-reader-text">Поиск:</span>
+	<input type="search" class="search-input" placeholder="Поиск..." value="" name="s" title="Поиск:" />
+	<button type="submit" role="button" class="search-submit">Поиск</button>
+</form>			</div>
+		</div><!-- .header-search -->
+	
+	<div id="content" class="site-content container clear">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" >
+
+			
+<article id="post-648" class="post-648 post type-post status-publish format-standard hentry category-javascript tag-angularjs tag-javascript">
+	<header class="entry-header">	
+		<h1 class="entry-title">Модули в angularjs</h1>
+		<div class="entry-meta clear">
+			<span class="entry-author"><a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=96&#038;d=mm&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' /></a> Создано автором <a href="http://amdy.su/author/amdy/" title="Записи amdy" rel="author">amdy</a></span>
+			<span class="entry-date">17 февраля, 2015</span>
+			<span class="entry-category">в <a href="http://amdy.su/category/javascript/" title="Посмотреть все записи в JavaScript" >JavaScript</a> </span>
+		</div><!-- .entry-meta -->
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+	
+				
+		<p>Поговорим о повторно используемом коде. Чтобы код повторно использовать его нужно оформлять особым способом и выносить в пакеты. Сейчас все нормальные фреймворки в разных языках программирования имеют поддержку пакетов и пакетные менеджеры для управления ими, а так же для решения проблем с версиями и зависимостями. В javascript для управления пакетами применяется <a href="http://bower.io/" target="_blank">bower</a>. Теперь же рассмотрим как писать код, чтобы его можно было внедрять в проекты, в качестве препарируемого будет angularjs.</p>
+<p>Angularjs поддерживает <a href="https://docs.angularjs.org/guide/module" target="_blank">модули</a>, будем использовать именно их. Для примера можно разворатить пару готовых, я же постараюсь описать найденное мною. Модуль является контейнер в который мы можем складывать константы, переменные, контроллеры, сервисы и т.д., далее мы просто подключаем js файл и при создании модуля приложений добавляем свой модуль в зависимости.<span id="more-648"></span></p>
+<pre class="brush:js">angular.module('myModule', [])
+  .value('bar', 123).;
+angular
+  .module('appModule', ['myModule'])</pre>
+<p>Теперь в модуле <em>appModule</em> будет доступно все из <em>myModule</em>, это довольно печальный факт, т.к. не продумали даже неймспейсов для избавления от коллизий с именованием. Т.е. переменная <em>bar</em> будет доступна именно по своему имени <em>bar</em>, хотелось бы что-то вроде <em>myModule.bar</em>. Потому в целях борьбы с этим старайтесь создавать модули на каждый чих, чтобы разом в скоуп не забрасывать все содержимое. Например, можно создавать модули отдельно для контроллеров, сервисов, директив или дробить модуль на части по функционалу.</p>
+<pre class="brush:js">angular.module('myModule.controllers', [])
+  .controller(...)
+  .controller(...);
+angular.module('myModule.services', [])
+  .service(...)
+  .service(...);
+angular.module('appModule', ['myModule.controllers', 'myModule.services'])</pre>
+<pre class="brush:js">angular.module('myModule.blog', [])
+  .controller(...)
+  .service(...)
+  .directive(...);
+angular.module('myModule.catalog', [])
+  .controller(...)
+  .service(...)
+  .directive(...);
+angular.module('appModule', ['myModule.blog', 'myModule.catalog'])</pre>
+<p>К сожалению это всё что имеется у меня по данной теме, теперь покажу пример такого модуля. Как самый часто используемый я взял авторизацию и проверку прав. Набросал довольно простой модуль. Суть такова: при описании роутоу мы добавляем аттрибут <em>access</em> и если он есть, то проверяем залогинен ли пользователь. Для отлавливания момента смены роута вешаем событие на <em>$rootScope.$on(&#8216;$routeChangeStart&#8217;, &#8230;)</em>. Ну и пару методов для авторизации и её сброса.</p>
+<pre class="brush:js">(function (windows, angular) {
+  'use strict';
+  angular.module('amdyAuth', [])
+    .factory('UserService', ['$rootScope', '$http', function ($rootScope, $http) {
+      var self = {
+        config: {
+          urlLogin: '/login',
+          urlLogout: '/logout',
+          urlRedirect: '/'
+        },
+        isLogged: false,
+        user: {},
+        run: function (userConfig) {
+          angular.extend(this.config, userConfig);
+          $rootScope.$broadcast('UserService:run', this);
+          $rootScope.$on('$routeChangeStart', function (event, next, current) {
+            if (next.auth &amp;&amp; !self.isLogged) {
+              next.resolve = null;
+              next.redirectTo = self.config.urlRedirect;
+              event.preventDefault();
+            }
+          });
+        },
+        logout: function () {
+          $rootScope.$broadcast('UserService:logout');
+          this.clear();
+          return $http.get(this.config.urlLogout);
+        },
+        clear: function () {
+          this.isLogged = false;
+          this.user = {};
+        },
+        login: function (data) {
+          $rootScope.$broadcast('UserService:login', data);
+          return $http.post(this.config.urlLogin, data)
+            .success(function (data, status, headers, config) {
+              self.isLogged = true;
+              self.user = data;
+              $rootScope.$broadcast('UserService:login:success', data);
+            })
+            .error(function (data, status, headers, config) {
+              $rootScope.$broadcast('UserService:login:error', data);
+            });
+        }
+      };
+      return self;
+    }]);
+})(window, window.angular)
+</pre>
+<p>Как видно, создал модуль <em>amdyAuth</em> и в нем одну фабрику порождающий наш сервис UserService. Завёл переменную self, чтобы обращаться к объекту в callback-ах. Для конфигурирования создал конфиг, который затем можно переопределять при вызове метода <em>run</em>, где навешивается наше событие на смену роута. Так же для событий по смене состояний постоянно делаю broadcast, чтобы модуль можно было расширять без влезания в его код. Функционала минимум.</p>
+<p>Теперь посмотрим его использование.</p>
+<pre class="brush:js">(function (windows, angular) {
+  'use strict';
+  angular.module('appModule', [
+    'ngRoute',
+    'amdyAuth'
+  ]).config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+    $routeProvider.when('/', {controller: 'IndexController', templateUrl: '/app/_index.html'})
+      .when('/public', {controller: 'PublicController', templateUrl: '/app/_public.html'})
+      .when('/admin', {controller: 'AdminController', templateUrl: '/app/_admin.html', auth: true})
+      .otherwise({redirectTo: '/'});
+  }]).run(['UserService', '$rootScope', function (UserService, $rootScope) {
+    $rootScope.$on('UserService:run', function (e, data) {
+      console.info('UserService:run', data);
+    });
+    $rootScope.$on('UserService:login', function (e, data) {
+      console.info('UserService:login', data);
+    });
+    $rootScope.$on('UserService:login:success', function (e, data) {
+      console.info('UserService:login:success', data);
+    });
+    $rootScope.$on('UserService:login:error', function (e, data) {
+      console.info('UserService:login:error', data);
+    });
+    $rootScope.$on('UserService:logout', function (e, data) {
+      console.info('UserService:logout', data);
+    });
+    UserService.run({urlLogin: 'login.json', urlLogout: "login.json"});
+  }]).controller('MainController', ['$scope', 'UserService', '$location', function ($scope, UserService, $location) {
+    $scope.userService = UserService;
+    $scope.logout = function () {
+      UserService.logout();
+      $location.path('/');
+    }
+  }]).controller('IndexController', ['$scope', 'UserService', function ($scope, UserService) {
+    $scope.login = '';
+    $scope.password = '';
+    $scope.userService = UserService;
+    $scope.doLogin = function () {
+      UserService.login({login: $scope.login, password: $scope.password});
+    }
+  }]).controller('PublicController', [function () {
+  }]).controller('AdminController', [function () {
+  }])
+  ;
+})(window, window.angular);
+</pre>
+<p>Подключил свой модуль, после чего в методе <em>run</em> повесил слушетелей на наши события и вызвал метод <em>UserService.run({urlLogin: &#8216;login.json&#8217;, urlLogout: &#171;login.json&#187;});</em> переопределяя переменные конфига. Для роута <em>/admin</em> указал что нужно проверять права <em>auth: true</em>.</p>
+<p>Результат можно посмотреть забрать с гитхаба <a title="angularjs auth" href="https://github.com/AmdY/blog-angular-modules" target="_blank">https://github.com/AmdY/blog-angular-modules</a></p>
+<p>Теперь немного о модулях. Созданый модуль нужно выносить в отдельный репозиторий, добавлять в него bower.json и регистрировать, чтобы можно было использовать в других проектах. В попытках найти готовые модули я набрёл на один выживший проект <a title="angular modules" href="http://ngmodules.org/" target="_blank">http://ngmodules.org/</a>. В больше тысячи зарегистрированных модулей, а вот статистика лайков удручает, у самого популярного всего 402, а с сотней не наберётся и десятка. Люди предпочитают велосипедить, хотя есть довольно полезные модули. Но при этом нормальной авторизации, который легко бы интегрировался с laravel я не нашёл, постараюсь докрутить до продакшен состояния этот.</p>
+<p>p.s. Покритикуйте код, а то в javascript я далеко не гуру и стиль по старинке, как под IE6.</p>
+<p>&nbsp;</p>
+	</div><!-- .entry-content -->
+
+	<span class="entry-tags">
+		<span class="tag-links"> <a href="http://amdy.su/tag/angularjs/" rel="tag">angularjs</a> <a href="http://amdy.su/tag/javascript/" rel="tag">JavaScript</a></span>			
+			</span><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+		<div class="entry-related clear">
+			<h3>Вам также <span>может понравиться</span></h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="http://amdy.su/2009/05/20/otchyot-o-konferentsii-baynet-23-gamma/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2009/05/20/otchyot-o-konferentsii-baynet-23-gamma/">Отчёт о конференции &#171;Байнет 2.3 Gamma&#187;</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="http://amdy.su/2008/10/02/formyi-i-safari/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2008/10/02/formyi-i-safari/">Формы и Safari</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+<div class="author-box clear">
+	<a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=120&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=240&#038;d=mm&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' /></a>
+	<div class="author-meta">	
+		<h4 class="author-name">About the Author: <span><a href="http://amdy.su/author/amdy/">amdy</a></span></h4>	
+		<div class="author-desc">
+					</div>
+	</div>
+</div><!-- .author-box -->
+
+<div id="comments" class="comments-area">
+
+			<h4 class="comments-title">
+			5 комментариев		</h4>
+
+		
+		<ol class="comment-list">
+					<li id="comment-38481" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-38481" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/80a79bf47981f708dec6fe669bf8b465?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/80a79bf47981f708dec6fe669bf8b465?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Владислав</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/#comment-38481">
+							<time datetime="2015-04-06T11:35:24+03:00">
+								6 апреля, 2015 в 11:35							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Зачем создавать переменную self, если все равно используется указатель this (вперемешку с self, что сбивает с толку)?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/?replytocom=38481#respond' data-commentid="38481" data-postid="648" data-belowelement="div-comment-38481" data-respondelement="respond" aria-label='Комментарий к записи Владислав'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-38483" class="comment byuser comment-author-amdy bypostauthor odd alt depth-2">
+			<article id="div-comment-38483" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/#comment-38483">
+							<time datetime="2015-04-06T12:37:02+03:00">
+								6 апреля, 2015 в 12:37							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>self используется в коллбэках, когда вешается какое-то событие или в promise для ajax запросов. В этих местах меняется контекст и this будет указывать на другие объекты, потому нужно либо использовать костыль с self, либо самому биндить нужный контекст.<br />
+В остальных местах используется this, заменять его на self не виду смысла.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/?replytocom=38483#respond' data-commentid="38483" data-postid="648" data-belowelement="div-comment-38483" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-38482" class="comment even thread-odd thread-alt depth-1">
+			<article id="div-comment-38482" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/80a79bf47981f708dec6fe669bf8b465?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/80a79bf47981f708dec6fe669bf8b465?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Владислав</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/#comment-38482">
+							<time datetime="2015-04-06T11:45:24+03:00">
+								6 апреля, 2015 в 11:45							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Разобрался. Но все же, в таком случае, если можно использовать self, зачем писать this. Такое разнообразие указаний на один объект в одном и том же месте запутывает.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/?replytocom=38482#respond' data-commentid="38482" data-postid="648" data-belowelement="div-comment-38482" data-respondelement="respond" aria-label='Комментарий к записи Владислав'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-45191" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-45191" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/41553fd03eec73b011c3b8c18c515607?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/41553fd03eec73b011c3b8c18c515607?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Ярослав</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/#comment-45191">
+							<time datetime="2016-11-13T22:14:34+03:00">
+								13 ноября, 2016 в 22:14							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>думаю, в данном примере лучше использовать service вместо factory, так как service &#8212; это инстанс, а factory &#8212; функция-конструктор</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/?replytocom=45191#respond' data-commentid="45191" data-postid="648" data-belowelement="div-comment-45191" data-respondelement="respond" aria-label='Комментарий к записи Ярослав'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-45192" class="comment byuser comment-author-amdy bypostauthor even depth-2">
+			<article id="div-comment-45192" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/#comment-45192">
+							<time datetime="2016-11-14T18:44:13+03:00">
+								14 ноября, 2016 в 18:44							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Да, очень ценное замечание, я как-то поимел проблем из-за любви к сервисам, вместо фабрик.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2015/02/17/%d0%bc%d0%be%d0%b4%d1%83%d0%bb%d0%b8-%d0%b2-angularjs/?replytocom=45192#respond' data-commentid="45192" data-postid="648" data-belowelement="div-comment-45192" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Добавить комментарий <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2015/02/17/%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D0%B8-%D0%B2-angularjs/#respond" style="display:none;">Отменить ответ</a></small></h3><form action="http://amdy.su/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Ваш адрес email не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Комментарий</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Имя <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Сайт</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><noscript>
+						  <div>
+							<div style="width: 302px; height: 422px; position: relative;">
+							  <div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg"
+										frameborder="0" scrolling="no"
+										style="width: 302px; height:422px; border-style: none;">
+								</iframe>
+							  </div>
+							</div>
+							<div style="width: 300px; height: 60px; border-style: none;
+										   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+										   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+							  <textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
+										   class="g-recaptcha-response"
+										   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+												  margin: 10px 25px; padding: 0px; resize: none;" ></textarea>
+							</div>
+						  </div>
+						</noscript><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий" /> <input type='hidden' name='comment_post_ID' value='648' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b496804b2a" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="138"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer">
+
+				
+		<div id="site-bottom" class="container clear">
+
+			<div class="site-info">Авторские права &copy; 2021 <a href="http://amdy.su/" title="AmdY"><span>AmdY</span></a>. Все права защищены.<br>Тема: VT Blogging от <a href="https://volthemes.com/theme/vt-blogging-pro/" target="_blank" title="VolThemes"><span>VolThemes</span></a>. Работает на <a href="https://wordpress.org" target="_blank" title="WordPress"><span>WordPress</span></a>.</div>			
+
+		</div><!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+	
+</div><!-- #page -->
+
+			<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof wc_checkout_params !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="https://www.google.com/recaptcha/api.js?onload=anr_onloadCallback&#038;render=explicit"
+				async defer>
+			</script>
+				<div id="back-top">
+		<a href="#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ расширить источник';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Не удается найти кисть для: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Пакет не был настроен для опции html-script: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/amdy.su\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV&#038;ver=3.0'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/comment-reply.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/superfish.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.slicknav.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/modernizr.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/html5shiv.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.custom.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/wp-embed.min.js?ver=5.4.4'></script>
+<script async="async" type='text/javascript' src='http://amdy.su/wp-content/plugins/akismet/_inc/form.js?ver=4.1.5'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+</body>
+</html>

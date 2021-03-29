@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="true">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+
+<title>Laravel-4 &#8212; AmdY</title>
+<link rel='dns-prefetch' href='//amdy.su' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента" href="http://amdy.su/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев" href="http://amdy.su/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="AmdY &raquo; Лента комментариев к &laquo;Laravel-4&raquo;" href="http://amdy.su/2013/06/01/laravel-4/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-6704399-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-6704399-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/amdy.su\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://amdy.su/wp-includes/css/dist/block-library/style.min.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://amdy.su/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.7' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/style.css?ver=1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/assets/fonts/genericons/genericons.css?ver=5.4.4' type='text/css' media='all' />
+<link rel='stylesheet' id='vt-blogging-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-style-css'  href='http://amdy.su/wp-content/themes/vt-blogging/responsive.css?ver=1.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/amdy.su","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://amdy.su/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://amdy.su/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://amdy.su/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Шаблон для PHP приложений' href='http://amdy.su/2013/05/14/shablon-dlya-php-prilozheniy/' />
+<link rel='next' title='ORDER BY FIELD в Laravel' href='http://amdy.su/2013/09/19/order-by-field-v-laravel/' />
+<meta name="generator" content="WordPress 5.4.4" />
+<link rel="canonical" href="http://amdy.su/2013/06/01/laravel-4/" />
+<link rel='shortlink' href='http://amdy.su/?p=543' />
+<link rel="alternate" type="application/json+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2013%2F06%2F01%2Flaravel-4%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://amdy.su/wp-json/oembed/1.0/embed?url=http%3A%2F%2Famdy.su%2F2013%2F06%2F01%2Flaravel-4%2F&#038;format=xml" />
+<link rel="pingback" href="http://amdy.su/xmlrpc.php"><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+</head>
+
+<body class="post-template-default single single-post postid-543 single-format-standard group-blog">
+<div id="page" class="site">
+
+	<header id="masthead" class="site-header clear">
+
+		<div class="container">
+
+			<div class="site-branding">
+			
+									<h1 class="site-title"><a href="http://amdy.su/" title="AmdY" rel="home">AmdY</a></h1>
+					<h2 class="site-description">Извращение программиста</h2>
+				
+			</div><!-- .site-branding -->
+
+			<nav id="primary-nav" class="main-navigation">
+
+				<div class="menu-primary-navigation-container"><ul id="primary-menu" class="sf-menu"><li id="menu-item-520" class="menu-item menu-item-type- menu-item-object- menu-item-520"><a></a></li>
+<li id="menu-item-644" class="menu-item menu-item-type- menu-item-object- menu-item-644"><a></a></li>
+<li id="menu-item-646" class="menu-item menu-item-type- menu-item-object- menu-item-646"><a></a></li>
+<li id="menu-item-645" class="menu-item menu-item-type- menu-item-object- menu-item-645"><a></a></li>
+<li id="menu-item-773" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-773"><a href="http://amdy.su/contacts/">Контакты</a></li>
+</ul></div>
+			</nav><!-- #primary-nav -->
+
+							<span class="search-icon">
+					<span class="genericon genericon-search"></span>
+					<span class="genericon genericon-close"></span>			
+				</span>
+				
+
+			<div id="slick-mobile-menu"></div>
+		
+		</div><!-- .container -->
+
+	</header><!-- #masthead -->
+
+			<div class="header-search">
+			<div class="container">
+				
+<form id="searchform" role="search" method="get" action="http://amdy.su/">
+	<span class="screen-reader-text">Поиск:</span>
+	<input type="search" class="search-input" placeholder="Поиск..." value="" name="s" title="Поиск:" />
+	<button type="submit" role="button" class="search-submit">Поиск</button>
+</form>			</div>
+		</div><!-- .header-search -->
+	
+	<div id="content" class="site-content container clear">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" >
+
+			
+<article id="post-543" class="post-543 post type-post status-publish format-standard hentry category-php tag-form tag-framework tag-laravel tag-mvc tag-orm tag-queues tag-routing">
+	<header class="entry-header">	
+		<h1 class="entry-title">Laravel-4</h1>
+		<div class="entry-meta clear">
+			<span class="entry-author"><a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=48&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=96&#038;d=mm&#038;r=g 2x' class='avatar avatar-48 photo' height='48' width='48' /></a> Создано автором <a href="http://amdy.su/author/amdy/" title="Записи amdy" rel="author">amdy</a></span>
+			<span class="entry-date">1 июня, 2013</span>
+			<span class="entry-category">в <a href="http://amdy.su/category/php/" title="Посмотреть все записи в PHP" >PHP</a> </span>
+		</div><!-- .entry-meta -->
+
+		
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+	
+				
+		<p>Последнее время меня пугают некоторые тенденции для библиотек в PHP, вместо простого и быстрой разработки мы получаем JAVA. Сейчас много php фреймворков и я их делю на две основные категории:</p>
+<p>1. Монстры с большой гибкостью и возможностью менять любой компонент. Они отлично подходят для кровавого энтерпрайза. В этой категории два лидера Symfony 2 и Zend Framework 2, хотя последний у меня вызывает скепсис, слишком уж сырой он появился на свет.</p>
+<p>2. Фреймворки для быстрой разработки, они менее архитектурно красивы, зато не требуют писать такую кучу кода. Среди них следует отметить широко известные Yii и Kohana.</p>
+<p>Есть ещё микрофреймворки, php расширения, pear и т.д., но как правило они лучше подходят в качестве отдельных компонент или на очень уж простые проекты.</p>
+<p>Я же решил рассказать о Laravel, буквально вчера появилась 4-я версия этого прекрасного фреймворка из категории 2. О нём пока мало известно, хотя 3-я версия была очень хороша и имела систему бандлов. Чего в полной мере не было у конкурентов.<span id="more-543"></span></p>
+<p><a href="http://laravel.com/" target="_blank">Laravel</a> позиционирует себя как php фреймворк для ремесленников. Для гуру есть symfony, а php для тех, кому нужно быстро наклепать средней руки веб проект. В нём используется много <strong>статических вызовов</strong>, чтобы не заморачиваться с зависимостями, но при этом за счёт использования паттерна <a href="http://en.wikipedia.org/wiki/Facade_pattern" target="_blank">Facade</a>, у нас нет проблем с переопределением и тестированием. В 4-й версии используется много <strong>компонентов из symfony 2</strong>, ребята не пишут велосипедов, а лишь делают те компоненты, которые они могут сделать удобнее и быстрее. Larvel <strong>очень быстрый</strong>.</p>
+<p>Основные плюшки.</p>
+<p><strong>1. RSETful routing.</strong></p>
+<pre class="brush:php">Route::group(array('before' =&gt; 'auth'), function()
+{
+    Route::get('/', function()
+    {
+        // Has Auth Filter
+    });
+
+    Route::post('user/{id?}', function()
+    {
+        // Has Auth Filter
+    });
+});</pre>
+<p>Мы можем задавать тип заброса, объеденять роуты в группы, добавлять pre-after фильтры, можем роутить контроллер</p>
+<pre class="brush:php">Route::controller('users', 'UserController');</pre>
+<p>И мега фича &#8212; роутинг ресурсов, что оечнь помогает при разработке под мобильные платформы или при создании REST API</p>
+<pre class="brush:php">Route::resource('photo', 'PhotoController');</pre>
+<p>В результате мы будем обрабатывать урлы вида</p>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>УРЛ</th>
+<th>Действие</th>
+<th>Имя роута</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/resource</td>
+<td>index</td>
+<td>resource.index</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/resource/create</td>
+<td>create</td>
+<td>resource.create</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/resource</td>
+<td>store</td>
+<td>resource.store</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/resource/{id}</td>
+<td>show</td>
+<td>resource.show</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/resource/{id}/edit</td>
+<td>edit</td>
+<td>resource.edit</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td>/resource/{id}</td>
+<td>update</td>
+<td>resource.update</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/resource/{id}</td>
+<td>destroy</td>
+<td>resource.destroy</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2. Командная строка и поддержка composer.</strong></p>
+<p>Во фреймворке активно используется кодогенерация, имеет масса готовых команд и легко можно добавлять свои, что активно делается сообществом.</p>
+<pre><code>php artisan list</code></pre>
+<p>С помощью команд можно заздавать контроллеры, управлять базой данных, менять схему, накатывать миграции, создавать тесты и масса других плюшек.</p>
+<p>В старой версии установка сторонних расширений-бандлов делалось с помощью той же командной строки, но с появлением composer-а этот функционал переложили на него.</p>
+<p><strong>3. Bundle или Package.</strong></p>
+<p>Раньше были банды, которые расширяли функционал фреймворка и позволяли использовать готовые компоненты-контроллеры. Но ребята из Laravel опять прогнулись под стандарты и переименовали их в Package, подключили composer и сейчас уже <a href="https://packagist.org/packages/way/guard-laravel">16 страниц на Packagist</a>. Что удивительно, учитывая, что стабильный релиз был лишь на этой неделе. Из чего мы имеем следующий плюч.</p>
+<p><strong>4. Комьюнити, комьюнити&#8230;.</strong></p>
+<p>Эти удивительные ребята мало кричат о крутости любимого фреймворка, но много пишут чтобы сделать его лучше. Стиль перенят из Ruby on Rails, много скринкастов и статей, регулярно проводятся конференции, в качестве IDE предпочитают Sublime text, да и для поддержки автокаплита нужно ставить отдельный пакет. И да, вы можете <a href="http://teespring.com/laravel" target="_blank">заказать себе майку</a>, заметьте, там нет кричащей надписи с названием фреймворка, а понятно лишь для своего круга.</p>
+<p><strong>5. Очереди (Queues).</strong></p>
+<p>Удивительно, но очередям выделено особое место, потому что ребята понимают что в современном мире даже письма отсылаются с помощью очередей. Поддерживаются сервисы очередей  <a href="http://kr.github.com/beanstalkd">Beanstalkd</a>, <a href="http://iron.io/">IronMQ</a>, <a href="http://aws.amazon.com/sqs">Amazon SQS</a>. Берёте supervisor, поднимаете через artisan демона-слушателя и работаете с очередью без плясок с бубном.</p>
+<pre class="brush:php">Mail::queue('emails.welcome', $data, function($message)
+{
+    $message-&gt;to('foo@example.com', 'John Smith')-&gt;subject('Welcome!');
+});</pre>
+<p>6. Компоненты, которые нужны в жизни настоящего проекта, безопасность, формы, шаблонизатор с наследованием, сессии, отправка писем в одну строку, валидация, пагинация, IoC и  тестирование компонетова, контроллеров, TDD с phpunit или BDD с Behat. При этом использования всего этого добра в 1-2 строки, а не через сотню конфигов и десяток цепочек вызовов.</p>
+<p>В 4-й версии докрутили компонент для работы с базой данных, теперь ORM умеет делать джойны. Из коробки поддерживается MySQL, Postgres, SQLite, SQL Server и из <strong>NoSql</strong> Redis и Mongo.</p>
+<p>Плюсов ещё много, я постараюсь подвести черту.</p>
+<p><strong>Итого:</strong></p>
+<p>Laravel &#8212; быстрый, удобный фреймворк, с большим функционалом, хорошей производительностью и поддержкой современных технологий. Он замечательно подходит под нагруженные сайты, для создания REST API, мобильного бекенда и так называемые стартапы. Энтерпрайз это не для него.</p>
+	</div><!-- .entry-content -->
+
+	<span class="entry-tags">
+		<span class="tag-links"> <a href="http://amdy.su/tag/form/" rel="tag">form</a> <a href="http://amdy.su/tag/framework/" rel="tag">framework</a> <a href="http://amdy.su/tag/laravel/" rel="tag">laravel</a> <a href="http://amdy.su/tag/mvc/" rel="tag">mvc</a> <a href="http://amdy.su/tag/orm/" rel="tag">ORM</a> <a href="http://amdy.su/tag/queues/" rel="tag">queues</a> <a href="http://amdy.su/tag/routing/" rel="tag">routing</a></span>			
+			</span><!-- .entry-tags -->
+
+</article><!-- #post-## -->
+
+
+		<div class="entry-related clear">
+			<h3>Вам также <span>может понравиться</span></h3>
+			<div class="related-loop clear">
+														<div class="hentry">
+													<a class="thumbnail-link" href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2016/03/25/%d0%bd%d0%b5%d0%b4%d0%be%d1%81%d1%82%d0%b0%d1%82%d0%ba%d0%b8-laravel/">Недостатки laravel</a></h2>
+					</div><!-- .grid -->
+														<div class="hentry last">
+													<a class="thumbnail-link" href="http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/" rel="bookmark">
+								<div class="thumbnail-wrap">
+									<img src="http://amdy.su/wp-content/themes/vt-blogging/assets/img/no-thumbnail-2.png" alt="No Picture" />
+								</div><!-- .thumbnail-wrap -->
+							</a>
+										
+						<h2 class="entry-title"><a href="http://amdy.su/2015/03/07/%d0%bf%d1%80%d0%be%d0%b1%d0%bb%d0%b5%d0%bc%d1%8b-%d1%81-%d0%be%d0%b1%d0%bd%d0%be%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5%d0%bc-ubuntu/">Проблемы с обновлением ubuntu</a></h2>
+					</div><!-- .grid -->
+							</div><!-- .related-posts -->
+		</div><!-- .entry-related -->
+
+	
+<div class="author-box clear">
+	<a href="http://amdy.su/author/amdy/"><img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=120&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=240&#038;d=mm&#038;r=g 2x' class='avatar avatar-120 photo' height='120' width='120' /></a>
+	<div class="author-meta">	
+		<h4 class="author-name">About the Author: <span><a href="http://amdy.su/author/amdy/">amdy</a></span></h4>	
+		<div class="author-desc">
+					</div>
+	</div>
+</div><!-- .author-box -->
+
+<div id="comments" class="comments-area">
+
+			<h4 class="comments-title">
+			30 комментариев		</h4>
+
+		
+		<ol class="comment-list">
+					<li id="comment-22562" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-22562" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/c6185e3f640b258c417068ec57ca0843?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c6185e3f640b258c417068ec57ca0843?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Рафкат</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22562">
+							<time datetime="2013-06-22T18:53:32+03:00">
+								22 июня, 2013 в 18:53							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Джойны в ОРМ уже были же в третьей версии?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22562#respond' data-commentid="22562" data-postid="543" data-belowelement="div-comment-22562" data-respondelement="respond" aria-label='Комментарий к записи Рафкат'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22563" class="comment byuser comment-author-amdy bypostauthor odd alt depth-2">
+			<article id="div-comment-22563" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22563">
+							<time datetime="2013-06-23T15:04:06+03:00">
+								23 июня, 2013 в 15:04							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Это интересный момент, джойнов как таковых ORM не предусматривает до сих пор, всё тянется в несколько запросов. В новой версии ORM появилась появилось ключевое слово with, которое заранее подтягивает данные.</p>
+<p>Я сам подобный подход уже использую лет пять, парочка быстрых запросов по ключу с кешем зачастую лучше.</p>
+<p>Но у Laravel есть query builder, где можно составлять оптимальные запросы, если припрёт.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22563#respond' data-commentid="22563" data-postid="543" data-belowelement="div-comment-22563" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-22601" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-22601" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/d75495c7c40aa23a8e0c7a689348f9d9?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/d75495c7c40aa23a8e0c7a689348f9d9?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Вася</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22601">
+							<time datetime="2013-08-18T17:50:23+03:00">
+								18 августа, 2013 в 17:50							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>но почему такая тупая установка? почему обязательно какой-то сраный composer? почему нельзя просто скачать и работать?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22601#respond' data-commentid="22601" data-postid="543" data-belowelement="div-comment-22601" data-respondelement="respond" aria-label='Комментарий к записи Вася'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22602" class="comment byuser comment-author-amdy bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-22602" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22602">
+							<time datetime="2013-08-18T18:29:32+03:00">
+								18 августа, 2013 в 18:29							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Это нужно чтобы ничего не качать, а просто работать.<br />
+Composer отслеживает зависимости от других библиотек и самого php, следит за версиями, скачивает эти самые пакеты автоматически. Благодаря компосеру сам ларавел устанавливается в отду строку composer create-project laravel/laravel, автоматически скачивается актуальная версия фреймворка и библиотек, генерируется токен и проводится оптимизация.<br />
+Помимо всего в состав компосера входит готовый автолодер и не нужно писать require &#8230;..</p>
+<p>Компосер это обязательный софт для php разработчика и обязательно должна быть поддержка в своих библиотеках. Например, тот же yii без компосера просто ужасен, а проекты на нём превращаются в клубок зависимостей.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22602#respond' data-commentid="22602" data-postid="543" data-belowelement="div-comment-22602" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-37106" class="comment even depth-3 parent">
+			<article id="div-comment-37106" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/11014f389a9abd6b846ee6b4720b38df?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/11014f389a9abd6b846ee6b4720b38df?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Олег</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-37106">
+							<time datetime="2015-02-19T23:31:17+03:00">
+								19 февраля, 2015 в 23:31							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Ага, только иногда бьешься с этим говнозером битый час, чтобы что-то поставить. Работает правильно в 40% случаев. Часто не ставит даже то, что есть на этом packagist.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=37106#respond' data-commentid="37106" data-postid="543" data-belowelement="div-comment-37106" data-respondelement="respond" aria-label='Комментарий к записи Олег'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-37112" class="comment byuser comment-author-amdy bypostauthor odd alt depth-4">
+			<article id="div-comment-37112" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-37112">
+							<time datetime="2015-02-20T02:18:56+03:00">
+								20 февраля, 2015 в 02:18							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>С компосером вообще проблем нет, всё устанавливается одной строчкой. Ни разу не встречал ситуации, чтобы что-то не ставилось. МОжете привести хоть один пример их этих 40%?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=37112#respond' data-commentid="37112" data-postid="543" data-belowelement="div-comment-37112" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-22611" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-22611" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/ff66aa8c38bb904051f05bdd8c2ff4be?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/ff66aa8c38bb904051f05bdd8c2ff4be?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://websidekicks.com' rel='external nofollow ugc' class='url'>irmscher</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22611">
+							<time datetime="2013-10-09T04:01:40+03:00">
+								9 октября, 2013 в 04:01							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Laravel 4 намного сложнее Laravel 3? Для небольшого проэкта стоит ли начинать сразу с 4-ого?</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22611#respond' data-commentid="22611" data-postid="543" data-belowelement="div-comment-22611" data-respondelement="respond" aria-label='Комментарий к записи irmscher'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22612" class="comment byuser comment-author-amdy bypostauthor odd alt depth-2 parent">
+			<article id="div-comment-22612" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22612">
+							<time datetime="2013-10-09T09:06:17+03:00">
+								9 октября, 2013 в 09:06							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Наверное, за счёт компосера он стал чуть сложнее по началу, а вот за счёт новых более удобных и гибких компонентов, потом становится всё проще.<br />
+Новый проект стоит начинать на 4-м, есть сразу готовые сборки с авторизацией и минимальной админкой, типа <a href="https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site" rel="nofollow ugc">https://github.com/andrew13/Laravel-4-Bootstrap-Starter-Site</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22612#respond' data-commentid="22612" data-postid="543" data-belowelement="div-comment-22612" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-36205" class="comment even depth-3 parent">
+			<article id="div-comment-36205" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">мимопроходящий</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-36205">
+							<time datetime="2015-01-28T14:18:06+03:00">
+								28 января, 2015 в 14:18							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Хорошая сборка для быстрого старта, жаль только что не tinymce в качестве редактора, хотя самому можно добавить</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=36205#respond' data-commentid="36205" data-postid="543" data-belowelement="div-comment-36205" data-respondelement="respond" aria-label='Комментарий к записи мимопроходящий'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-36207" class="comment byuser comment-author-amdy bypostauthor odd alt depth-4">
+			<article id="div-comment-36207" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-36207">
+							<time datetime="2015-01-28T14:22:26+03:00">
+								28 января, 2015 в 14:22							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Самому надо просто добавить готовый пакет <a href="https://github.com/barryvdh/laravel-elfinder" rel="nofollow ugc">https://github.com/barryvdh/laravel-elfinder</a>, сразу получаешь и редактор и интегрированный файловый менеджер. Из коробки такие вещи сложно предоставлять из-за проблем с правами и лицензиями.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=36207#respond' data-commentid="36207" data-postid="543" data-belowelement="div-comment-36207" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-36209" class="comment even depth-4">
+			<article id="div-comment-36209" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">мимопроходящий</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-36209">
+							<time datetime="2015-01-28T15:09:41+03:00">
+								28 января, 2015 в 15:09							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>я поменял на CkEditor <a href="http://ckeditor.com/download" rel="nofollow ugc">http://ckeditor.com/download</a><br />
+Меняется так &#8212; в шаблоне app\views\admin\layouts\modal.blade.php<br />
+убираем подключение скриптов корявого wysihtml5</p>
+<p>Далее подключаем </p>
+<p>//$(&#8216;.wysihtml5&#8217;).wysihtml5(); &#8212; комментим<br />
+$(&#8216;.wysihtml5&#8217;).ckeditor(); &#8212; добавляем<br />
+Все готово</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=36209#respond' data-commentid="36209" data-postid="543" data-belowelement="div-comment-36209" data-respondelement="respond" aria-label='Комментарий к записи мимопроходящий'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-22640" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-22640" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/fb33d48ee80bd2db1112dd3cf74ea257?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/fb33d48ee80bd2db1112dd3cf74ea257?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Васо</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22640">
+							<time datetime="2013-11-22T17:36:05+03:00">
+								22 ноября, 2013 в 17:36							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Вашу мать, ну не ставится у меня компостер этот грёбанный ввинде на диск D. Подавайте ему С млять только. Гавно гавно, кругом гавно.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22640#respond' data-commentid="22640" data-postid="543" data-belowelement="div-comment-22640" data-respondelement="respond" aria-label='Комментарий к записи Васо'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-22641" class="comment byuser comment-author-amdy bypostauthor even depth-2">
+			<article id="div-comment-22641" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22641">
+							<time datetime="2013-11-22T17:41:26+03:00">
+								22 ноября, 2013 в 17:41							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Эм. Его то и ставить не обязательно, можно просто скачать composer.phar и использовать как в этой моей сборке <a href="https://github.com/AmdY/php-app-skeleton" rel="nofollow ugc">https://github.com/AmdY/php-app-skeleton</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22641#respond' data-commentid="22641" data-postid="543" data-belowelement="div-comment-22641" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-22663" class="comment odd alt depth-2 parent">
+			<article id="div-comment-22663" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/e2eb2a78a67a1736e656f716f2cb5e65?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/e2eb2a78a67a1736e656f716f2cb5e65?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">batazor</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22663">
+							<time datetime="2014-04-06T04:07:05+03:00">
+								6 апреля, 2014 в 04:07							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Не знаю у меня нормально встал на диск D</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22663#respond' data-commentid="22663" data-postid="543" data-belowelement="div-comment-22663" data-respondelement="respond" aria-label='Комментарий к записи batazor'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-26250" class="comment even depth-3">
+			<article id="div-comment-26250" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1b7e3938e8acab87383aa9c85d375ad1?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1b7e3938e8acab87383aa9c85d375ad1?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Кирилл</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-26250">
+							<time datetime="2014-05-19T20:54:30+03:00">
+								19 мая, 2014 в 20:54							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>И давно у вас стоит на диск D? XD</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=26250#respond' data-commentid="26250" data-postid="543" data-belowelement="div-comment-26250" data-respondelement="respond" aria-label='Комментарий к записи Кирилл'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-36992" class="comment odd alt depth-2 parent">
+			<article id="div-comment-36992" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/c5961af75ee23f854b324078189dfd30?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/c5961af75ee23f854b324078189dfd30?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://lifecity.com.ua' rel='external nofollow ugc' class='url'>ShaDeRzz</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-36992">
+							<time datetime="2015-02-16T19:17:09+03:00">
+								16 февраля, 2015 в 19:17							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Написал мануал по установке композера под винду и часто встречающиеся ошибки: <a href="http://lifecity.com.ua/blog/view/2832/" rel="nofollow ugc">http://lifecity.com.ua/blog/view/2832/</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=36992#respond' data-commentid="36992" data-postid="543" data-belowelement="div-comment-36992" data-respondelement="respond" aria-label='Комментарий к записи ShaDeRzz'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-37032" class="comment byuser comment-author-amdy bypostauthor even depth-3">
+			<article id="div-comment-37032" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-37032">
+							<time datetime="2015-02-17T14:38:37+03:00">
+								17 февраля, 2015 в 14:38							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Под виндой надо сразу разварачивать vagrant и ставить homestead, не надо заморачиваться установкой lamp, git, composer и ловить затем грабли.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=37032#respond' data-commentid="37032" data-postid="543" data-belowelement="div-comment-37032" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-22642" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-22642" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/dcd34201609a28a1cdc126d98a2b5f62?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/dcd34201609a28a1cdc126d98a2b5f62?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">John</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22642">
+							<time datetime="2013-11-28T07:40:17+03:00">
+								28 ноября, 2013 в 07:40							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Laravel один из лучших фреймворков современного php. Очень логично построен и заточен на получение красивого результата в сжатые сроки.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22642#respond' data-commentid="22642" data-postid="543" data-belowelement="div-comment-22642" data-respondelement="respond" aria-label='Комментарий к записи John'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-22655" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-22655" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/810308fab024566a7585f8f291bd4852?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/810308fab024566a7585f8f291bd4852?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Роман</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22655">
+							<time datetime="2014-02-28T11:13:54+03:00">
+								28 февраля, 2014 в 11:13							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Стою между двух огней. Знаю ZF1, ZF2 начинаю на работе изучать. Так же знаю Kohana. Но хочется ещё чего-то на замену Kohanе, то ли Laravel то ли Yii, никак не могу определиться. Увы, ваша статья тоже не дала пинка в какую либо сторону. =))) В идеале хотел бы знать оба, но параллельно не выйдет никак. А почему вам не нравится Yii? Или нравится, но меньше?</p>
+<p>P.S. У вас очепятка в &#171;1. RSETful routing.&#187; правильно &#171;1. RESTful routing.&#187;.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22655#respond' data-commentid="22655" data-postid="543" data-belowelement="div-comment-22655" data-respondelement="respond" aria-label='Комментарий к записи Роман'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-33514" class="comment odd alt depth-2">
+			<article id="div-comment-33514" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/4dae8f1127af93ea6bec6e450935f267?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4dae8f1127af93ea6bec6e450935f267?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Alexxali</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-33514">
+							<time datetime="2014-09-23T21:32:59+03:00">
+								23 сентября, 2014 в 21:32							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>У вас тоже: не &#171;очепятка&#187; а &#171;опечатка&#187;. 🙂</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=33514#respond' data-commentid="33514" data-postid="543" data-belowelement="div-comment-33514" data-respondelement="respond" aria-label='Комментарий к записи Alexxali'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-22656" class="comment even thread-even depth-1">
+			<article id="div-comment-22656" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/878ff1c70f8baff6e4ab041db8174d25?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/878ff1c70f8baff6e4ab041db8174d25?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">an</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-22656">
+							<time datetime="2014-03-14T07:51:56+03:00">
+								14 марта, 2014 в 07:51							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>asd</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=22656#respond' data-commentid="22656" data-postid="543" data-belowelement="div-comment-22656" data-respondelement="respond" aria-label='Комментарий к записи an'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-35982" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-35982" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">andr</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-35982">
+							<time datetime="2015-01-20T20:29:20+03:00">
+								20 января, 2015 в 20:29							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Yii 2 тоже любит композер, как по мне так самое логичное решение с которым я работал это Codeigniter, скачал настроил и работай, без всяких тупых композеров и миграций которые неизвестно чтоделают</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=35982#respond' data-commentid="35982" data-postid="543" data-belowelement="div-comment-35982" data-respondelement="respond" aria-label='Комментарий к записи andr'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-36210" class="comment even depth-2">
+			<article id="div-comment-36210" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/800cef19993deae7296a0fce66233475?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">мимопроходящий</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-36210">
+							<time datetime="2015-01-28T15:26:29+03:00">
+								28 января, 2015 в 15:26							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Как моему Yii2 это самый идиотский инструмент что я встречал</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=36210#respond' data-commentid="36210" data-postid="543" data-belowelement="div-comment-36210" data-respondelement="respond" aria-label='Комментарий к записи мимопроходящий'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-36603" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-36603" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://0.gravatar.com/avatar/68504bc72b856484ca7f61415c0bce93?s=70&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/68504bc72b856484ca7f61415c0bce93?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Eug</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-36603">
+							<time datetime="2015-02-08T18:57:27+03:00">
+								8 февраля, 2015 в 18:57							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Срань этот ваш ларавел. Что то доавил дай знать огб этом ту, а еще тут, вот тут еще пропиши путь. Нет один раз прописать патенр и спать спокойно. Этот фреймворк больше похож на груду функций нежели на что то дельное.<br />
+Yii вам в руки!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=36603#respond' data-commentid="36603" data-postid="543" data-belowelement="div-comment-36603" data-respondelement="respond" aria-label='Комментарий к записи Eug'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-37115" class="comment byuser comment-author-amdy bypostauthor even depth-2">
+			<article id="div-comment-37115" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-37115">
+							<time datetime="2015-02-20T02:25:00+03:00">
+								20 февраля, 2015 в 02:25							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Тяжело в учении, легко в бою. Второй yii 2 так же поднял планку входного порога, вот только там всё сделано убого и неудобно, laravel после этого кажется сказкой. Все кто попробовал laravel в реальных условиях на yii уже не возвращаются, разве что на symfony мигрируют, там ещё больше танцев с бубном, но зато более академически верно.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=37115#respond' data-commentid="37115" data-postid="543" data-belowelement="div-comment-37115" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-38001" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-38001" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/7c76da24af94c0bac19ea92baeab7d28?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7c76da24af94c0bac19ea92baeab7d28?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su/laravel-4/' rel='external nofollow ugc' class='url'>Виктор</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-38001">
+							<time datetime="2015-03-23T16:55:41+03:00">
+								23 марта, 2015 в 16:55							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Да говно этот сраный laravel. В руки насрать и выкинуть долбоебу который сделал этот ебнутый фреймворк. Особенно последняя версия этого говна которое он почему то назвал фреймворком. Ставиться хер знает как. То запрашивает пароль которые кстати хрен знает откуда брать то не спрашивает. Как этот полудурок сделал этот говнокод для laravel которые хер знает как работает. Никакой ни логики ни стабильности. Тоже какасаеться и update файла composer.json. Такая же долбоебская логика. То спрашивает пароль не понятно откуда его брать то не спрашивает. Так что искренне желаю что бы этот мудак который написал эту хуйню называемую фреймворком laravel сдох от бубонной чумы. И если ты это прочитаешь то вот тебе мой совет не можешь срать не мучай жопу мудила</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=38001#respond' data-commentid="38001" data-postid="543" data-belowelement="div-comment-38001" data-respondelement="respond" aria-label='Комментарий к записи Виктор'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-38003" class="comment byuser comment-author-amdy bypostauthor even depth-2 parent">
+			<article id="div-comment-38003" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1ce6f4ecad0eb49565d1443d7907a9a8?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://amdy.su' rel='external nofollow ugc' class='url'>AmdY</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-38003">
+							<time datetime="2015-03-23T17:35:39+03:00">
+								23 марта, 2015 в 17:35							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Вы же понимаете, что composer &#8212; это отдельный инструмент, который просто используется для управления зависимостями и версиями и не имеет отношения к самому фреймворку? Никаких паролей вводить не нужно, это уже ваши косяки какие-то.</p>
+<p>Это очень хорошо, что вы споткнулись входном пороге из composer, не дойдя до самого фреймворка и коммерческих проектов на нём, вам ещё учиться и учиться. И ругать за это нужно себя, а не фреймворк и его автора.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=38003#respond' data-commentid="38003" data-postid="543" data-belowelement="div-comment-38003" data-respondelement="respond" aria-label='Комментарий к записи AmdY'>Ответить</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-40085" class="comment odd alt depth-3">
+			<article id="div-comment-40085" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/1fcd0a7afeccbffb399775414b082105?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/1fcd0a7afeccbffb399775414b082105?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Саша</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-40085">
+							<time datetime="2015-05-22T20:48:16+03:00">
+								22 мая, 2015 в 20:48							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>AmdY, респект за сдержанность.<br />
+Виктор, ты самый лучший пример &#171;программистов&#187; которые тянут php вниз.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=40085#respond' data-commentid="40085" data-postid="543" data-belowelement="div-comment-40085" data-respondelement="respond" aria-label='Комментарий к записи Саша'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-41195" class="comment even thread-even depth-1">
+			<article id="div-comment-41195" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://2.gravatar.com/avatar/5a73f6b4460fc023eafb0b070ae03812?s=70&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/5a73f6b4460fc023eafb0b070ae03812?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn"><a href='http://webaliser.org' rel='external nofollow ugc' class='url'>Webaliser</a></b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-41195">
+							<time datetime="2015-07-04T00:55:56+03:00">
+								4 июля, 2015 в 00:55							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>symfony для гуру &#8212; весьма сомнительно. Как раз все эти недоделанные фреймворки по части для чего-то на коленке кривовато среднячкового. Но на вкус и цвет&#8230;</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=41195#respond' data-commentid="41195" data-postid="543" data-belowelement="div-comment-41195" data-respondelement="respond" aria-label='Комментарий к записи Webaliser'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-45112" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-45112" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='http://1.gravatar.com/avatar/7b6a38ececd2f888a27d0a3dc23b46a7?s=70&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/7b6a38ececd2f888a27d0a3dc23b46a7?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' />						<b class="fn">Ibraf</b><span class="says">:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://amdy.su/2013/06/01/laravel-4/#comment-45112">
+							<time datetime="2016-10-28T12:05:46+03:00">
+								28 октября, 2016 в 12:05							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Виктор, ты конченный кусок говна, нассать тебе на лицо за ту херню , которую ты написал.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel='nofollow' class='comment-reply-link' href='http://amdy.su/2013/06/01/laravel-4/?replytocom=45112#respond' data-commentid="45112" data-postid="543" data-belowelement="div-comment-45112" data-respondelement="respond" aria-label='Комментарий к записи Ibraf'>Ответить</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Добавить комментарий <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/06/01/laravel-4/#respond" style="display:none;">Отменить ответ</a></small></h3><form action="http://amdy.su/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Ваш адрес email не будет опубликован.</span> Обязательные поля помечены <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Комментарий</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Имя <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Сайт</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.</label></p>
+<div class="anr_captcha_field"><div id="anr_captcha_field_1" class="anr_captcha_field_div"></div></div><noscript>
+						  <div>
+							<div style="width: 302px; height: 422px; position: relative;">
+							  <div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg"
+										frameborder="0" scrolling="no"
+										style="width: 302px; height:422px; border-style: none;">
+								</iframe>
+							  </div>
+							</div>
+							<div style="width: 300px; height: 60px; border-style: none;
+										   bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+										   background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+							  <textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
+										   class="g-recaptcha-response"
+										   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+												  margin: 10px 25px; padding: 0px; resize: none;" ></textarea>
+							</div>
+						  </div>
+						</noscript><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Отправить комментарий" /> <input type='hidden' name='comment_post_ID' value='543' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="9bac8a1039" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="131"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content .site-content -->
+	
+	<footer id="colophon" class="site-footer">
+
+				
+		<div id="site-bottom" class="container clear">
+
+			<div class="site-info">Авторские права &copy; 2021 <a href="http://amdy.su/" title="AmdY"><span>AmdY</span></a>. Все права защищены.<br>Тема: VT Blogging от <a href="https://volthemes.com/theme/vt-blogging-pro/" target="_blank" title="VolThemes"><span>VolThemes</span></a>. Работает на <a href="https://wordpress.org" target="_blank" title="WordPress"><span>WordPress</span></a>.</div>			
+
+		</div><!-- #site-bottom -->
+							
+	</footer><!-- #colophon -->
+	
+</div><!-- #page -->
+
+			<script type="text/javascript">
+				var anr_onloadCallback = function() {
+					for ( var i = 0; i < document.forms.length; i++ ) {
+						var form = document.forms[i];
+						var captcha_div = form.querySelector( '.anr_captcha_field_div' );
+
+						if ( null === captcha_div )
+							continue;
+						captcha_div.innerHTML = '';
+						( function( form ) {
+							var anr_captcha = grecaptcha.render( captcha_div,{
+								'sitekey' : '6LeMdkoUAAAAALUI-M3JfyIs5brUTCv2R5JLtaMg',
+								'size'  : 'normal',
+								'theme' : 'light'
+							});
+							if ( typeof wc_checkout_params !== 'undefined' ) {
+								jQuery( document.body ).on( 'checkout_error', function(){
+									grecaptcha.reset(anr_captcha);
+								});
+							}
+							if ( typeof wpcf7 !== 'undefined' ) {
+								document.addEventListener( 'wpcf7submit', function() {
+									grecaptcha.reset(anr_captcha);
+								}, false );
+							}
+						})(form);
+					}
+				};
+			</script>
+						<script src="https://www.google.com/recaptcha/api.js?onload=anr_onloadCallback&#038;render=explicit"
+				async defer>
+			</script>
+				<div id="back-top">
+		<a href="#top" title="Back to top"><span class="genericon genericon-collapse"></span></a>
+	</div>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushAS3.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushBash.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushColdFusion.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushClojure.js?ver=20090602'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCpp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCss.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDelphi.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushDiff.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushErlang.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushFSharp.js?ver=20091003'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushGroovy.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJava.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJavaFX.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushJScript.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushLatex.js?ver=20090613'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushMatlabKey.js?ver=20091209'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushObjC.js?ver=20091207'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPerl.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPlain.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPowerShell.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPython.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/third-party-brushes/shBrushR.js?ver=20100919'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushRuby.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushScala.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushSql.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushVb.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushXml.js?ver=3.0.9b'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushYaml.js?ver=3.0.9b'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "http://amdy.su/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeRDark.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ расширить источник';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Не удается найти кисть для: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Пакет не был настроен для опции html-script: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"http:\/\/amdy.su\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://amdy.su/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.7'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV&#038;ver=3.0'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/comment-reply.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/superfish.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.slicknav.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/modernizr.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/html5shiv.min.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-content/themes/vt-blogging/assets/js/jquery.custom.js?ver=5.4.4'></script>
+<script type='text/javascript' src='http://amdy.su/wp-includes/js/wp-embed.min.js?ver=5.4.4'></script>
+<script async="async" type='text/javascript' src='http://amdy.su/wp-content/plugins/akismet/_inc/form.js?ver=4.1.5'></script>
+<script type="text/javascript">
+( function( grecaptcha, sitekey, actions ) {
+
+	var wpcf7recaptcha = {
+
+		execute: function( action ) {
+			grecaptcha.execute(
+				sitekey,
+				{ action: action }
+			).then( function( token ) {
+				var forms = document.getElementsByTagName( 'form' );
+
+				for ( var i = 0; i < forms.length; i++ ) {
+					var fields = forms[ i ].getElementsByTagName( 'input' );
+
+					for ( var j = 0; j < fields.length; j++ ) {
+						var field = fields[ j ];
+
+						if ( 'g-recaptcha-response' === field.getAttribute( 'name' ) ) {
+							field.setAttribute( 'value', token );
+							break;
+						}
+					}
+				}
+			} );
+		},
+
+		executeOnHomepage: function() {
+			wpcf7recaptcha.execute( actions[ 'homepage' ] );
+		},
+
+		executeOnContactform: function() {
+			wpcf7recaptcha.execute( actions[ 'contactform' ] );
+		},
+
+	};
+
+	grecaptcha.ready(
+		wpcf7recaptcha.executeOnHomepage
+	);
+
+	document.addEventListener( 'change',
+		wpcf7recaptcha.executeOnContactform, false
+	);
+
+	document.addEventListener( 'wpcf7submit',
+		wpcf7recaptcha.executeOnHomepage, false
+	);
+
+} )(
+	grecaptcha,
+	'6Lcno_MUAAAAAOggmDaS8g0Ad-n4T1Dccp4jPZnV',
+	{"homepage":"homepage","contactform":"contactform"}
+);
+</script>
+
+</body>
+</html>
